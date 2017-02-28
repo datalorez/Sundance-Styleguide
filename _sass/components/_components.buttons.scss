@@ -1,0 +1,181 @@
+/* ==========================================================================
+   #BUTTONS
+   ========================================================================== */
+
+/**
+ * This is an example component. Extend inuitcss by building your own components
+ * that make up your UI. Component classes are prefixed with a `c-`.
+ */
+
+/**
+ * 1. Allow us to style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Make buttons inherit font styles (often necessary when styling `input`s as
+ *    buttons).
+ * 4. Reset/normalize some styles.
+ * 5. Force all button-styled elements to appear clickable.
+ */
+
+.c-btn {
+  display: inline-block; /* [1] */
+  vertical-align: middle; /* [2] */
+  font: $heading-font-family; /* [3] */
+  text-align: center; /* [4] */
+  margin: 0; /* [4] */
+  cursor: pointer; /* [5] */
+  padding: $inuit-global-spacing-unit/2 $inuit-global-spacing-unit;
+  transition: $global-transition;
+  border-radius: $global-radius;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+
+
+
+
+/* Style variants
+   ========================================================================== */
+
+.c-btn--primary {
+  background-color: $color-black;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none; /* [4] */
+    color: $color-white;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-black-hover;
+  }
+
+}
+
+.c-btn--secondary {
+  background-color: $color-primary;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    color: $color-black;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-primary-hover;
+  }
+
+}
+
+.c-btn--tertiary {
+  background-color: $color-black-disabled;
+  color: $color-black;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    color: $color-black;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: darken($color-black-disabled, 15%)
+  }
+
+}
+
+.c-btn.c-btn--disabled {
+  background-color: $color-black-disabled;
+  color: darken($color-black-disabled, 10%)
+}
+
+
+
+
+
+/* Size variants
+   ========================================================================== */
+
+.c-btn--small {
+  font-size: 0.875em;
+  padding: ($inuit-global-spacing-unit-small*.25) $inuit-global-spacing-unit-small;
+}
+
+.c-btn--large {
+  padding: $inuit-global-spacing-unit $inuit-global-spacing-unit-large;
+}
+
+.c-btn--full {
+  width: 100%;
+}
+
+
+
+
+/* Ghost buttons
+   ========================================================================== */
+
+/**
+ * Ghost buttons have see-through backgrounds and are bordered.
+ */
+
+$btn-ghost-border-width: 2px;
+
+.c-btn--ghost {
+  border: $btn-ghost-border-width solid $color-black;
+  padding: ($inuit-global-spacing-unit-small - $btn-ghost-border-width) ($inuit-global-spacing-unit - $btn-ghost-border-width);
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    background: none;
+  }
+
+  &.c-btn--small {
+    padding: ($inuit-global-spacing-unit-tiny - $btn-ghost-border-width) ($inuit-global-spacing-unit-small - $btn-ghost-border-width);
+  }
+
+  &.c-btn--large {
+    padding: ($inuit-global-spacing-unit - $btn-ghost-border-width) ($inuit-global-spacing-unit-large - $btn-ghost-border-width);
+  }
+
+  &.c-btn--primary {
+    color: $color-primary;
+
+    &:hover,
+    &:focus {
+      color: $color-primary-hover;
+    }
+
+  }
+
+  &.c-btn--secondary {
+    color: $color-black;
+
+    &:hover,
+    &:focus {
+      color: $color-black-hover;
+    }
+
+  }
+
+  &.c-btn--tertiary {
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+    }
+
+  }
+
+}

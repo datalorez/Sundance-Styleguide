@@ -1,0 +1,29 @@
+.c-featured__item {
+  position: relative;
+}
+
+.c-featured__item--primary {
+  .c-featured__item-text-wrapper {
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    margin: 24px;
+  }
+  h3 {
+    margin-bottom: 0;
+  }
+}
+
+.c-featured__item--small {
+  h3 {
+    @include mq($from: desktop) {
+      @include inuit-font-size(18px, 1.222222222);
+    }
+    @include mq($until: tablet) {
+      @include inuit-font-size($inuit-font-size-h3, 1.2307692308);
+    }
+    @include mq($until: mobile) {
+      @include inuit-font-size(18px, 1.222222222);
+    }
+  }
+}

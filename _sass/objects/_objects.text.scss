@@ -1,0 +1,27 @@
+.o-color--white, .o-color--white > * {
+  color: $color-white;
+}
+
+.o-color--primary {
+  color: $color-primary;
+}
+
+.o-color--secondary {
+  color: $color-secondary;
+}
+
+.o-color--active {
+  color: $color-active;
+}
+
+.o-color--accent-1 {
+  color: $color-accent-1;
+}
+
+.o-color--accent-2 {
+  color: $color-accent-2;
+}
+
+.o-color--accent-3 {
+  color: $color-accent-3;
+}

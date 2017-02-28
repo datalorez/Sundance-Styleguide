@@ -1,0 +1,4 @@
+.o-section {
+  @include inuit-clearfix();
+  margin-bottom: $inuit-global-spacing-unit-large;
+}

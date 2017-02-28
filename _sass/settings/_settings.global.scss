@@ -1,0 +1,17 @@
+///* ========================================================================
+//   #GLOBAL
+//   ======================================================================== */
+// The global settings file contains any project-wide variables; things that
+// need to be made available to the entire codebase.
+
+// Standardise some UI treatments.
+$global-radius: 2px !default;
+$global-transition: all 300ms ease-in-out !default;
+
+// Fonts
+$trade-gothic: 'trade-gothic', Helvetica, Arial, sans-serif;
+$trade-gothic-cond: 'trade-gothic-cond', Helvetica, Arial, sans-serif;
+$base-font-family: $trade-gothic;
+$heading-font-family: $trade-gothic-cond;
+
+// Colors

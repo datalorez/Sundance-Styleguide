@@ -1,0 +1,37 @@
+///* ========================================================================
+//   #COLORS
+//   ======================================================================== */
+
+$color-black: #000000;
+$color-black-hover: lighten($color-black, 25%);
+$color-black-disabled: lighten($color-black, 90%);
+$color-gray:#333333;
+$color-gray-mid:#666666;
+$color-gray-light: #f5f5f5;
+
+$nf-yellow: #edff2d;
+$nf-orange: #f94a22;
+$nf-purple: #f000a4;
+$nf-gray: #f0f0f0;
+
+$color-orange: #FFD00F;
+$color-gold: #ffca07;
+$color-yellow: #fef236;
+$color-red: #E60029;
+$color-green: #67823A;
+$color-blue: #4F758B;
+$color-white: #fff;
+
+$color-primary: $color-orange;
+$color-primary-hover: lighten($color-primary, 15%);
+$color-secondary: $color-red;
+$color-secondary-hover: darken($color-secondary, 10%);
+$color-active: $color-orange;
+$color-accent-1: $color-red;
+$color-accent-2: $color-green;
+$color-accent-3: $color-blue;
+
+$color-text-primary: $color-gray;
+$color-text-heading: $color-black;
+
+$color-background-primary: $color-gray-light;

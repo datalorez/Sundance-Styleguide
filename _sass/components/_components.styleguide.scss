@@ -1,0 +1,79 @@
+/* ==========================================================================
+   #STYLEGUIDE
+   ========================================================================== */
+
+/*
+These are styles which are intended to only affect stylguide components.
+ */
+
+// Colors
+
+.c-color-box {
+  height: 120px;
+  color: $color-white;
+  padding: $inuit-global-spacing-unit-small;
+  margin-bottom: $inuit-global-spacing-unit-large;
+}
+
+.c-color-box__primary {
+  background-color: $color-primary;
+  color: $color-black;
+}
+
+.c-color-box__secondary {
+  background-color: $color-secondary;
+}
+
+.c-color-box__black {
+  background-color: $color-black;
+}
+
+.c-color-box__white {
+  background-color: $color-white;
+}
+
+.c-color-box__black-hover {
+  background-color: $color-black-hover;
+}
+
+.c-color-box__black-disabled {
+  background-color: $color-black-disabled;
+  color: $color-black;
+}
+
+.c-color-box__gray {
+  background-color: $color-gray;
+}
+
+.c-color-box__gray-mid {
+  background-color: $color-gray-mid;
+}
+
+.c-color-box__gray-light {
+  background-color: $color-gray-light;
+  color: $color-black;
+}
+
+.c-color-box__active {
+  background-color: $color-active;
+  color: $color-black;
+}
+
+.c-color-box__accent-1 {
+  background-color: $color-accent-1;
+}
+
+.c-color-box__accent-2 {
+  background-color: $color-accent-2;
+}
+
+.c-color-box__accent-3 {
+  background-color: $color-accent-3;
+}
+
+xmp {
+  background:#f5f5f5;
+  padding: 24px;
+  font-size:14px;
+  margin-bottom: 24px;
+}

@@ -1,0 +1,18 @@
+.o-section__editorial {
+  h2, p ~ h3 {
+    margin-top: $inuit-global-spacing-unit-large;
+  }
+  p {
+    font-size: 20px;
+    line-height: ($inuit-global-spacing-unit*1.5);
+    @include mq($until: mobile) {
+      @include inuit-font-size(16px, 1.5);
+    }
+  }
+  p ~ img {
+    margin-top: $inuit-global-spacing-unit;
+  }
+  img {
+    margin-bottom: $inuit-global-spacing-unit-large;
+  }
+}

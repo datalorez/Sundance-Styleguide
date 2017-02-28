@@ -1,0 +1,31 @@
+.c-menu {
+}
+.c-menu__item {
+  a {
+    padding: ($inuit-global-spacing-unit/2);
+  }
+  &:after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: ($inuit-global-spacing-unit/2);
+    font-family: 'FontAwesome';
+    content:'\f054';
+  }
+  .subtitle {
+    &:last-child {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: ($inuit-global-spacing-unit-large);
+      text-align: right;
+    }
+  }
+}
+
+.c-page-menu {
+}
+
+.c-page-menu__item {
+  padding: $inuit-global-spacing-unit-tiny ($inuit-global-spacing-unit-tiny*2);
+}

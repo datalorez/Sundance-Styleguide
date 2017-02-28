@@ -1,0 +1,14 @@
+.c-card__item {
+  .c-card__item-img-wrapper {
+    margin-bottom: $inuit-global-spacing-unit-tiny;
+  }
+  h3 {
+    margin-bottom: 0;
+  }
+  label {
+    color: $color-secondary;
+    a:hover {
+      color: $color-secondary-hover;
+    }
+  }
+}

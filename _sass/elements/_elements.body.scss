@@ -1,0 +1,26 @@
+/* ==========================================================================
+   #BODY
+   ========================================================================== */
+
+html {
+  font-family: $base-font-family;
+  color: $color-text-primary;
+}
+
+p, label {
+  @include mq($until: mobile) {
+    @include inuit-font-size(14px, 1.7142857143);
+  }
+}
+
+label {
+  line-height: 1.5rem;
+}
+
+label {
+  display: inline-block;
+}
+
+*::selection {
+  background-color: $color-orange;
+}

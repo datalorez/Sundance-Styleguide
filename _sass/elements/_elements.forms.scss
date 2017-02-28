@@ -1,0 +1,41 @@
+input, textarea {
+  padding: 11px $inuit-global-spacing-unit-tiny ;
+}
+
+input:not([type=checkbox]):not([type=radio]),
+textarea,
+select {
+  width: 100%;
+  line-height: 1.5rem;
+  font-family: $base-font-family;
+}
+
+input,
+select,
+textarea,
+button {
+  border: solid 1px $color-black-disabled;
+  border-radius: $global-radius;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline:none;
+  border: solid 1px $color-black;
+}
+
+::-webkit-input-placeholder {
+  color: $color-black-disabled;
+  font-weight: normal;
+}
+:-moz-placeholder {
+  color: $color-black-disabled;
+}
+::-moz-placeholder {
+  color: $color-black-disabled;
+}
+:-ms-input-placeholder {
+  color: $color-black-disabled;
+}

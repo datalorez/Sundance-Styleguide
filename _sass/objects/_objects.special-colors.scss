@@ -1,0 +1,13 @@
+.o-text__color--link {
+  color: $color-secondary;
+  a:hover & {
+    color: $color-secondary-hover;
+  }
+}
+
+.o-text__color--link-overlay {
+  color: $color-primary;
+  a:hover & {
+    color: $color-primary-hover;
+  }
+}

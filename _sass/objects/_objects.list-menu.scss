@@ -1,0 +1,23 @@
+.o-list-menu {
+  list-style: none;
+  margin-left: 0;
+  // background-color: $color-background-primary;
+}
+
+.o-list-menu__item {
+  position: relative;
+  cursor: pointer;
+  // border-bottom: solid 1px lighten($color-black, 80%);
+  a {
+    color: initial;
+    display:block;
+  }
+  &:hover {
+    background-color: $color-primary;
+    a {
+    }
+  }
+  &:last-child {
+    border-bottom: none;
+  }
+}

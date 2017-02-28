@@ -1,0 +1,21 @@
+.o-breadcrumb {
+  margin-bottom: 8px;
+}
+
+.o-breadcrumb__item {
+  position: relative;
+  padding-left: $inuit-global-spacing-unit-tiny*2;
+  padding-right: $inuit-global-spacing-unit-tiny;
+  &:before {
+    position: absolute;
+    left: 0;
+    content: '/';
+    color: $color-text-primary;
+  }
+  &:first-child {
+    padding-left: 0;
+    &:before {
+      display: none;
+    }
+  }
+}
