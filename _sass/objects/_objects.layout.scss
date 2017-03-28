@@ -101,9 +101,9 @@ $inuit-use-markup-fix: false !default;
     vertical-align: top; /* [3] */
     width: 100%; /* [4] */
     padding-left: $inuit-global-spacing-unit; /* [5] */
-      @include mq($until: mobile) {
-        padding-left: $inuit-global-spacing-unit/2;
-      }
+      // @include mq($until: mobile) {
+      //   padding-left: $inuit-global-spacing-unit/2;
+      // }
     @if ($inuit-use-markup-fix == false) {
       font-size: $inuit-global-font-size; /* [6] */
       font-size: 1rem;
