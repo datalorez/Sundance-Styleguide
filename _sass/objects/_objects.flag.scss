@@ -118,14 +118,14 @@
 .o-flag--large {
 
   > .o-flag__img {
-    padding-right: $inuit-global-spacing-unit-large;
+    padding-right: $inuit-global-spacing-unit-huge;
   }
 
   &.o-flag--reverse {
 
     > .o-flag__img {
       padding-right: 0;
-      padding-left: $inuit-global-spacing-unit-large;
+      padding-left: $inuit-global-spacing-unit-huge;
     }
 
   }

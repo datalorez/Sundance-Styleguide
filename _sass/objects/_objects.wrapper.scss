@@ -23,6 +23,12 @@ $inuit-wrapper-width: 1088px !default;
   max-width: $inuit-wrapper-width;
 }
 
+.o-wrapper__full-width {
+  @include inuit-clearfix();
+  margin-right: auto;
+  margin-left:  auto;
+}
+
 .o-content {
   z-index: 1;
 }

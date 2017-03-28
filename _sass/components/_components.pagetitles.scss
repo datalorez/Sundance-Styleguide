@@ -1,5 +1,13 @@
 .c-pagetitle {
-  h1 {
+  position:relative;
+  margin-bottom: $inuit-global-spacing-unit;
+  margin-top: $inuit-global-spacing-unit-huge;
+  @include mq($until: tablet) {
+    margin-top: $inuit-global-spacing-unit-large;
+    margin-bottom: $inuit-global-spacing-unit/2;
+  }
+  .c-background__light-gray & {
     margin-bottom: 0;
+    padding-bottom: $inuit-global-spacing-unit-huge;
   }
 }

@@ -1,8 +1,11 @@
-.o-breadcrumb {
+.c-breadcrumb {
   margin-bottom: 8px;
+  @include mq($until: tablet) {
+    display:none;
+  }
 }
 
-.o-breadcrumb__item {
+.c-breadcrumb__item {
   position: relative;
   padding-left: $inuit-global-spacing-unit-tiny*2;
   padding-right: $inuit-global-spacing-unit-tiny;

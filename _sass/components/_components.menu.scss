@@ -17,7 +17,7 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      right: ($inuit-global-spacing-unit-large);
+      right: ($inuit-global-spacing-unit-huge);
       text-align: right;
     }
   }
@@ -27,5 +27,8 @@
 }
 
 .c-page-menu__item {
-  padding: $inuit-global-spacing-unit-tiny ($inuit-global-spacing-unit-tiny*2);
+  a {
+    padding: $inuit-global-spacing-unit-tiny ($inuit-global-spacing-unit-tiny*2);
+  }
+
 }

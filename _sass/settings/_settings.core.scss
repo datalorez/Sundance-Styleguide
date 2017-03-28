@@ -27,10 +27,10 @@ $inuit-global-spacing-unit: round($inuit-global-line-height) !default;
 // How many times larger/smaller than the default should our spacing unit
 // variants be?
 
-$inuit-global-spacing-unit-factor-tiny:   0.3333 !default;
+$inuit-global-spacing-unit-factor-tiny:   0.3333  !default;
 $inuit-global-spacing-unit-factor-small:  0.6666  !default;
-$inuit-global-spacing-unit-factor-large:  2    !default;
-$inuit-global-spacing-unit-factor-huge:   4    !default;
+$inuit-global-spacing-unit-factor-large:  1.3333  !default;
+$inuit-global-spacing-unit-factor-huge:   2       !default;
 
 
 

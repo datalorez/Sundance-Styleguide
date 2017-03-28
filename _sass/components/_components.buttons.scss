@@ -110,7 +110,7 @@
 }
 
 .c-btn--large {
-  padding: $inuit-global-spacing-unit $inuit-global-spacing-unit-large;
+  padding: $inuit-global-spacing-unit $inuit-global-spacing-unit-huge;
 }
 
 .c-btn--full {
@@ -145,7 +145,7 @@ $btn-ghost-border-width: 2px;
   }
 
   &.c-btn--large {
-    padding: ($inuit-global-spacing-unit - $btn-ghost-border-width) ($inuit-global-spacing-unit-large - $btn-ghost-border-width);
+    padding: ($inuit-global-spacing-unit - $btn-ghost-border-width) ($inuit-global-spacing-unit-huge - $btn-ghost-border-width);
   }
 
   &.c-btn--primary {

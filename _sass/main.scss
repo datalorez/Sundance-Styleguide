@@ -145,7 +145,6 @@
 @import "objects/objects.modal";
 @import "objects/objects.special-colors";
 @import "objects/objects.full-bleed";
-@import "objects/objects.breadcrumbs";
 @import "objects/objects.type";
 
 
@@ -163,6 +162,11 @@
 @import "components/components.loaders.scss";
 @import "components/components.alerts.scss";
 @import "components/components.nav.scss";
+@import "components/components.backgrounds.scss";
+@import "components/components.breadcrumbs";
+@import "components/components.tabs";
+
+
 
 
 // UTILITIES

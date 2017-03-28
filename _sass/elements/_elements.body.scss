@@ -13,6 +13,10 @@ p, label {
   }
 }
 
+.o-layout__item p:last-child {
+  margin-bottom: 0;
+}
+
 label {
   line-height: 1.5rem;
 }

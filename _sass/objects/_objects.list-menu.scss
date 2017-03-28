@@ -11,10 +11,9 @@
   a {
     color: initial;
     display:block;
-  }
-  &:hover {
-    background-color: $color-primary;
-    a {
+    cursor: pointer;
+    &:hover {
+      background-color: $color-gray-light;
     }
   }
   &:last-child {
