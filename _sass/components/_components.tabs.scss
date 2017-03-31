@@ -2,7 +2,7 @@ $tab-width: 153px;
 $tab-width-mobile: 133px;
 
 .c-tab__container {
-  position: absolute;
+  position: relative;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -10,14 +10,15 @@ $tab-width-mobile: 133px;
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
   @include mq($until: tablet) {
-    left: 12px;
-    width: 100vw;
+    left: -12px;
   }
 }
 
 .c-tab {
   display: table;
   margin: 0;
+  padding: 0;
+  height: 48px;
 }
 
 .c-tab__container::-webkit-scrollbar {
@@ -25,6 +26,7 @@ $tab-width-mobile: 133px;
 }
 
 .c-tab__item {
+  height: 48px;
   display: table-cell;
   max-width: $tab-width;
   color: $color-black-disabled;
@@ -33,7 +35,6 @@ $tab-width-mobile: 133px;
   text-align: center;
   vertical-align: middle;
   line-height: 1.2;
-  height: 48px;
   @include mq($until: tablet) {
     max-width: $tab-width-mobile;
   }

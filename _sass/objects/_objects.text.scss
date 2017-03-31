@@ -1,3 +1,5 @@
+// Text Colors
+
 .o-color--white, .o-color--white > * {
   color: $color-white;
 }
@@ -8,6 +10,9 @@
 
 .o-color--secondary {
   color: $color-secondary;
+  &:hover, &:focus {
+    color: $color-secondary-hover;
+  }
 }
 
 .o-color--active {
@@ -24,4 +29,25 @@
 
 .o-color--accent-3 {
   color: $color-accent-3;
+}
+
+.o-color--text-primary {
+  color: $color-text-primary;
+}
+
+.o-color--black-disabled {
+  color: $color-black-disabled;
+  &:hover {
+    color: $color-black-disabled;
+  }
+}
+
+// Special Text Sizes
+
+.o-text--smalltext {
+  font-size: 14px;
+  line-height: 16px;
+  @include mq($until: mobile) {
+    @include inuit-font-size(12px, 16px);
+  }
 }

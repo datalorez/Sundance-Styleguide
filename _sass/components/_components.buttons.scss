@@ -19,7 +19,7 @@
 .c-btn {
   display: inline-block; /* [1] */
   vertical-align: middle; /* [2] */
-  font: $heading-font-family; /* [3] */
+  font-family: $heading-font-family; /* [3] */
   text-align: center; /* [4] */
   margin: 0; /* [4] */
   cursor: pointer; /* [5] */
@@ -106,7 +106,8 @@
 
 .c-btn--small {
   font-size: 0.875em;
-  padding: ($inuit-global-spacing-unit-small*.25) $inuit-global-spacing-unit-small;
+  line-height: 16px;
+  padding: ($inuit-global-spacing-unit-small*.25) $inuit-global-spacing-unit/2;
 }
 
 .c-btn--large {
@@ -127,11 +128,18 @@
  * Ghost buttons have see-through backgrounds and are bordered.
  */
 
-$btn-ghost-border-width: 2px;
+$btn-ghost-border-width: 1px;
 
 .c-btn--ghost {
-  border: $btn-ghost-border-width solid $color-black;
-  padding: ($inuit-global-spacing-unit-small - $btn-ghost-border-width) ($inuit-global-spacing-unit - $btn-ghost-border-width);
+  border: $btn-ghost-border-width solid $color-black-disabled;
+  // padding: ($inuit-global-spacing-unit-small - $btn-ghost-border-width) ($inuit-global-spacing-unit - $btn-ghost-border-width);
+  color: $color-black;
+
+  &:hover,
+  &:focus {
+    color: $color-black-hover;
+    border:  $btn-ghost-border-width solid $color-black-hover;
+  }
 
   &,
   &:hover,
@@ -149,11 +157,11 @@ $btn-ghost-border-width: 2px;
   }
 
   &.c-btn--primary {
-    color: $color-primary;
+    color: $color-black;
 
     &:hover,
     &:focus {
-      color: $color-primary-hover;
+      color: $color-secondary-hover;
     }
 
   }
@@ -178,4 +186,27 @@ $btn-ghost-border-width: 2px;
 
   }
 
+}
+
+/* Icon-only buttons
+   ========================================================================== */
+
+/**
+ * Icon-only buttons are filled with either logos (png) or icons (vectors)
+ * Icons use FontAwesome, add class fa-eye
+ */
+
+.c-btn--icon {
+  &:before {
+    font-family: $icon-font-family;
+    display: inline-block;
+    vertical-align: text-bottom;
+    margin-right: $inuit-global-spacing-unit-tiny;
+  }
+}
+
+.c-btn--icon-only {
+  width: $inuit-global-spacing-unit*1.6666;
+  height: $inuit-global-spacing-unit*1.6666;
+  padding: 0;
 }

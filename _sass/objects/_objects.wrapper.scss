@@ -21,16 +21,28 @@ $inuit-wrapper-width: 1088px !default;
   margin-right: auto;
   margin-left:  auto;
   max-width: $inuit-wrapper-width;
+  @include mq($until: desktop) {
+    max-width: 720px;
+  }
+  @include mq($until: tablet) {
+    max-width: 520px;
+  }
   @include mq($until: mobile) {
     padding-right: $inuit-global-spacing-unit/2;
     padding-left:  $inuit-global-spacing-unit/2;
+    max-width: 399px;
   }
+
 }
 
 .o-wrapper__full-width {
   @include inuit-clearfix();
   margin-right: auto;
   margin-left:  auto;
+  margin-bottom: $inuit-global-spacing-unit-huge;
+  @include mq($until: tablet) {
+    margin-bottom: $inuit-global-spacing-unit-large;
+  }
 }
 
 .o-content {
