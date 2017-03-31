@@ -1,57 +1,90 @@
+body.modal-open {
+	overflow: hidden;
+	position: fixed;
+}
+
+.o-modal, .o-modal__overlay {
+	z-index: $z-index-hidden;
+}
+
+
+
+.o-modal__toggle--hidden {display:none;}
+
+.o-modal,
+.o-modal__overlay {
+  height: 0;
+  width: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in;
+}
+
+.o-modal__close {
+  color: #000;
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  padding-top: 3px;
+  font-size: 16px;
+  width: 48px;
+  height: 48px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  &:hover { color: #333; }
+}
+
 .o-modal {
-	opacity: 0;
-	position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  padding: 100px;
-	visibility: hidden;
-	width: 100%;
-	box-sizing: border-box;
-	transition: all .4s ease-in-out;
-	-moz-transition: all .4s ease-in-out;
-	-webkit-transition: all .4s ease-in-out;
-}
-.o-modal:target {
-	opacity: 1;
-	visibility: visible;
+	background-color: $color-white;
+	width: auto;
+	height: auto;
+	// padding: $inuit-global-spacing-unit;
+	position:fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: $global-radius;
+	pointer-events: auto;
+	cursor: auto;
+	box-shadow: $drop-shadow-5;
 }
 
-.o-modal__content {
-	background: #ffffff;
-	position: absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-	z-index: 20;
-	color: #333333;
-}
-
-.o-modal .o-modal__overlay {
-	background-color: #000;
-	background: rgba(0,0,0,.8);
-	height: 100%;
-	left: 0;
+.o-modal.o-modal--full {
 	position: fixed;
 	top: 0;
-	width: 100%;
-	z-index: 10;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transform: none;
+	overflow: scroll;
 }
 
-/* Responsive Options */
-@media screen and (min-width: 768px) {
-	.o-modal {
-	}
+.o-modal__overlay {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	transition: opacity 0.2s ease-in;
 }
-.o-modal__close {
-  position:absolute;
-  top:100;
-  right:0;
-  z-index:30;
-  stroke: black;
-  fill: transparent;
-  stroke-linecap: round;
-  stroke-width: 5;
+
+.o-modal--input {
+  display: none;
+  &.active ~ .o-modal__overlay,
+  &:checked ~ .o-modal__overlay {
+    z-index: $z-index-modal;
+    visibility: visible;
+    opacity: 1;
+  }
+	&.active ~ .o-modal__container .o-modal,
+  &:checked ~ .o-modal__container .o-modal {
+    opacity: 1;
+		z-index: $z-index-modal*1.01;
+    visibility: visible;
+  }
 }

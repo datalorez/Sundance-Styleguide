@@ -48,18 +48,37 @@ title: Program
         <p>Founded by Robert Redford in 1981, the Sundance Institute Lab Program was created in response to the shared conviction that the budding independent film movement had the potential for far-reaching creative and cultural impact if given adequate resources and a place to foster self-expression and a sense of community. Thirty years later, under Michelle Satter’s continued leadership, the FFP’s network of Labs continues to provide a one-of-a-kind opportunity for filmmakers to incubate their most audacious ideas in an environment where risk-taking is encouraged and failure is regarded as a valuable step in a project’s creative evolution.</p>
         <div class="">
           <ul class="c-menu o-list-menu">
-            <li class="c-menu__item o-list-menu__item"><a href="#modal-text">
-              <span class="title">Screenwriters Lab<span>
-              <span class="subtitle">January 13-16, 2017</span>
-            </a></li>
-            <li class="c-menu__item o-list-menu__item"><a href="">
-              <span>Directors Lab<span>
-              <span class="subtitle">January 13-16, 2017</span>
-            </a></li>
-            <li class="c-menu__item o-list-menu__item"><a href="">
-              <span>Creative Producing Lab & Fellowship<span>
-              <span class="subtitle">January 13-16, 2017</span>
-            </a></li>
+            <li class="c-menu__item o-list-menu__item">
+
+              <input id="modal-123" class="o-modal--input" type="checkbox">
+              <label class="o-modal__toggle" for="modal-123">Click me</label>
+              <label class="o-modal__overlay o-overlay--black o-modal__toggle" for="modal-123"></label>
+              <div class="o-modal__container">
+                <div class="o-modal o-modal--full c-background__light-gray">
+                  <label class="o-modal__close o-modal__toggle" for="modal-123">&#x2715;</label>
+                  <div class="o-wrapper__modal">
+
+                    {% include fullmodal.html %}
+
+                  </div>
+                </div>
+              </div>
+
+            </li>
+            <li class="c-menu__item o-list-menu__item">
+
+
+              <input id="modal-124" class="o-modal--input" type="checkbox">
+              <label class="o-modal__toggle" for="modal-124">Click me</label>
+              <label class="o-modal__overlay o-overlay--black o-modal__toggle" for="modal-124"></label>
+              <div class="o-modal__container">
+                <div class="o-modal">
+                  <label class="o-modal__close o-modal__toggle" for="modal-124">&#x2715;</label>
+                  Modal 124
+                </div>
+              </div>
+
+            </li>
             <li class="c-menu__item o-list-menu__item"><a href="">
               <span>Editing Intensive<span>
               <span class="subtitle">January 13-16, 2017</span>
@@ -85,22 +104,14 @@ title: Program
       </section>
     </div>
   </div>
-  <script>
-      //Close with Escape Button
-      window.onkeydown = function(event) {
-          if (event.keyCode === 27) {
-              document.getElementById('close').click();
-          }
-      };
-  </script>
-    <div id="modal-text" class='o-modal' role="dialog" aria-labelledby="Modal title" aria-describedby="Modal description">
-      <a class="o-modal__close"href="#">Close Link</a>
-      <div class="o-modal__content">
-          Hello
-      </div>
 
-      <a href="#">
-          <div class="o-modal__overlay"></div>
-      </a>
-    </div>
+  <script type="text/javascript">
+  $('.o-modal__toggle').click(function() {
+    labelID = $(this).attr('for');
+    $('#' + labelID).toggleClass('active');
+    $('body').toggleClass('modal-open');
+  });
+  </script>
+
+
 </div>

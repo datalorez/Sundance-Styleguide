@@ -28,6 +28,10 @@
   border-radius: $global-radius;
   text-transform: uppercase;
   font-weight: bold;
+  box-shadow: $drop-shadow-1;
+    &:hover {
+      box-shadow: $drop-shadow-3;
+    }
 }
 
 
@@ -44,13 +48,13 @@
   &:hover,
   &:active,
   &:focus {
-    text-decoration: none; /* [4] */
+    // text-decoration: none; /* [4] */
     color: $color-white;
   }
 
   &:hover,
   &:focus {
-    background-color: $color-black-hover;
+    // background-color: $color-black-hover;
   }
 
 }
@@ -62,13 +66,13 @@
   &:hover,
   &:active,
   &:focus {
-    text-decoration: none;
+    // text-decoration: none;
     color: $color-black;
   }
 
   &:hover,
   &:focus {
-    background-color: $color-primary-hover;
+    // background-color: $color-primary-hover;
   }
 
 }
@@ -81,20 +85,28 @@
   &:hover,
   &:active,
   &:focus {
-    text-decoration: none;
+    // text-decoration: none;
     color: $color-black;
   }
 
   &:hover,
   &:focus {
-    background-color: darken($color-black-disabled, 15%)
+    // background-color: darken($color-black-disabled, 15%)
   }
 
 }
 
 .c-btn.c-btn--disabled {
   background-color: $color-black-disabled;
-  color: darken($color-black-disabled, 10%)
+  color: darken($color-black-disabled, 10%);
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    // text-decoration: none;
+    box-shadow: none;
+  }
 }
 
 
@@ -138,7 +150,7 @@ $btn-ghost-border-width: 1px;
   &:hover,
   &:focus {
     color: $color-black-hover;
-    border:  $btn-ghost-border-width solid $color-black-hover;
+    // border:  $btn-ghost-border-width solid $color-black-hover;
   }
 
   &,

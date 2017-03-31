@@ -4,7 +4,9 @@
 
 $color-black: #000000;
 $color-black-hover: lighten($color-black, 25%);
-$color-black-disabled: lighten($color-black, 75%);
+$color-black-disabled: lighten($color-black, 90%);
+$color-black-overlay: opacify(#000000, 0.38);
+
 $color-gray:#333333;
 $color-gray-mid:#666666;
 $color-gray-light: #f5f5f5;

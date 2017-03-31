@@ -1,7 +1,7 @@
 .c-menu {
 }
 .c-menu__item {
-  a {
+  > a:first-child {
     padding: ($inuit-global-spacing-unit/2);
   }
   &:after {
