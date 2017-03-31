@@ -24,17 +24,22 @@ body.modal-open {
 
 .o-modal__close {
   color: #000;
-  position: absolute;
-  right: 24px;
-  top: 24px;
-  padding-top: 3px;
-  font-size: 16px;
-  width: 48px;
-  height: 48px;
+  position: fixed;
+  right: $inuit-global-spacing-unit/2;
+  top: $inuit-global-spacing-unit/2;
+  // padding: 8px;
+  font-size: 24px;
   font-weight: bold;
   text-align: center;
   cursor: pointer;
   &:hover { color: #333; }
+	.o-modal--full & {
+		@include mq($from: desktop) {
+			right: $inuit-global-spacing-unit;
+			top: $inuit-global-spacing-unit;
+			font-size: 40px;
+	  }
+	}
 }
 
 .o-modal {
@@ -43,13 +48,23 @@ body.modal-open {
 	height: auto;
 	// padding: $inuit-global-spacing-unit;
 	position:fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	border-radius: $global-radius;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 	pointer-events: auto;
 	cursor: auto;
 	box-shadow: $drop-shadow-5;
+	overflow: scroll;
+	@include mq($from: desktop) {
+		min-width: 900px;
+		top: 50%;
+		left: 50%;
+		bottom: auto;
+		right: auto;
+		transform: translate(-50%, -50%);
+		border-radius: $global-radius;
+  }
 }
 
 .o-modal.o-modal--full {

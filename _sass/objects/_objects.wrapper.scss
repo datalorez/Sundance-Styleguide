@@ -47,12 +47,16 @@ $inuit-wrapper-width: 1088px !default;
 
 .o-wrapper__modal {
   @include inuit-clearfix();
-  padding: $inuit-global-spacing-unit-huge;
+  padding: $inuit-global-spacing-unit-large;
   margin-right: auto;
   margin-left:  auto;
   max-width: 900px;
-  @include mq($until: tablet) {
+  @include mq($until: desktop) {
     padding: $inuit-global-spacing-unit-large;
+    max-width: 420px;
+  }
+  @include mq($until: tablet) {
+    padding: $inuit-global-spacing-unit $inuit-global-spacing-unit/2;
   }
 }
 
