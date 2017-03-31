@@ -9,7 +9,7 @@ html {
 
 p, label, span, ul, li {
   @include mq($until: mobile) {
-    @include inuit-font-size(14px, 1.7142857143);
+    font-size: 14px;
   }
 }
 
