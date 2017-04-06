@@ -1,0 +1,17 @@
+.o-spacer__bottom--large {
+  margin-bottom: $inuit-global-spacing-unit-huge;
+  @include mq($until: tablet) {
+    margin-bottom: $inuit-global-spacing-unit-large;
+  }
+}
+
+.o-spacer__bottom--small {
+  margin-bottom: $inuit-global-spacing-unit;
+}
+
+.o-spacer__top--large {
+  margin-top: $inuit-global-spacing-unit-huge;
+  @include mq($until: tablet) {
+    margin-top: $inuit-global-spacing-unit-large;
+  }
+}

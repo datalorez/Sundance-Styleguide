@@ -12,13 +12,13 @@
 }
 
 
-  .o-list-inline__item {
-    display: inline-block;
-    a {
-      color: initial;
-      display: block;
-      &:hover {
-        color: $color-gray-light;
-      }
+.o-list-inline__item {
+  display: inline-block;
+  a {
+    color: initial;
+    display: block;
+    &:hover {
+      color: $color-gray-light;
     }
   }
+}

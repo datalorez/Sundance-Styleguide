@@ -1,0 +1,22 @@
+.c-dropdown__button {
+  &:after {
+    position:absolute;
+    top: $inuit-global-spacing-unit/2;
+    right: $inuit-global-spacing-unit/2;
+    font: normal normal normal 16px/1 "FontAwesome";
+    content: '\f0d7';
+    padding: $inuit-global-spacing-unit-tiny/2;
+  }
+}
+
+.c-dropdown {
+  display:none;
+  position:absolute;
+  background: white;
+  border-radius: $global-radius;
+  box-shadow: $drop-shadow-3;
+}
+
+.c-dropdown--active {
+  display:block;
+}

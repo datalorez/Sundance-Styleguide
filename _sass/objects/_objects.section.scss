@@ -1,11 +1,8 @@
 .o-section {
   @include inuit-clearfix();
-  margin-bottom: $inuit-global-spacing-unit-huge;
-  @include mq($until: tablet) {
-    margin-bottom: $inuit-global-spacing-unit-large;
-  }
+
 }
 
 .o-section--no-margin {
-  margin-bottom: 0;
+
 }
