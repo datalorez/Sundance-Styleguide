@@ -41,13 +41,15 @@ $inuit-crops: (
     top:  0; /* [1] */
     left: 0; /* [1] */
     max-width: auto; /* [2] */
+    min-height: 100%;
     .o-crop--16\:9 & {
       max-width: 140%; /* [2] */
-      min-height: 100%;
     }
     .o-crop--2\:3 & {
       max-width:120%;
-      min-height: 100%;
+    }
+    .o-crop--1\:1 & {
+      max-width: 120%; /* [2] */
     }
   }
 
