@@ -51,9 +51,20 @@ $inuit-wrapper-width: 1088px !default;
   @include mq($until: desktop) {
     padding: $inuit-global-spacing-unit-large;
     max-width: 420px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    .o-modal--photo & {
+      max-width: 100%;
+    }
   }
   @include mq($until: tablet) {
     padding: $inuit-global-spacing-unit $inuit-global-spacing-unit/2;
+    .o-modal--photo & {
+      padding: 0;
+      top: auto;
+      transform: none;
+    }
   }
 }
 

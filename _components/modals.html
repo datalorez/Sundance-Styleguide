@@ -9,28 +9,24 @@ permalink: /modals/
     <div class="o-layout__item u-1/1">
       <h3>Modals</h3>
     </div>
-    <div class="o-layout__item u-1/2@desktop">
+    <div class="o-layout__item u-1/3@desktop">
+      <label class="c-btn c-btn--primary o-modal__toggle" for="modal-large">Launch Full Screen Modal</label>
 
-      <input id="modal-large" class="o-modal--input" type="checkbox">
-      <label class="c-btn c-btn--primary" class="o-modal__toggle" for="modal-large">Launch Full Screen Modal</label>
-      <label class="o-modal__overlay o-overlay--black o-modal__toggle" for="modal-large"></label>
-      <div class="o-modal__container">
-        <div class="o-modal o-modal--full c-background__light-gray">
-          <label class="o-modal__close o-modal__toggle" for="modal-large">&#x2715;</label>
-          <div class="o-wrapper__modal">
-
-            {% include fullmodal.html %}
-
-          </div>
-        </div>
-      </div>
+      {% include fullmodal.html %}
 
     </div>
 
-    <div class="o-layout__item u-1/2@desktop">
+    <div class="o-layout__item u-1/3@desktop">
+      <label class="c-btn c-btn--primary o-modal__toggle" for="modal-photo">Launch Photo Modal</label>
+
+      {% include photomodal.html %}
+
+    </div>
+
+    <div class="o-layout__item u-1/3@desktop">
 
       <input id="modal-small" class="o-modal--input" type="checkbox">
-      <label class="c-btn c-btn--primary" class="o-modal__toggle" for="modal-small">Launch Normal Modal</label>
+      <label class="c-btn c-btn--primary o-modal__toggle" for="modal-small">Launch Normal Modal</label>
       <label class="o-modal__overlay o-overlay--black o-modal__toggle" for="modal-small"></label>
       <div class="o-modal__container">
         <div class="o-modal">

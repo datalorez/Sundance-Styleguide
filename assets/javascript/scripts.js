@@ -12,6 +12,21 @@ $( document ).ready(function() {
     }
   });
 
+  // toggles a class on current modal as well as body
+  $('.o-modal__toggle').click(function() {
+    labelID = $(this).attr('for');
+    $('#' + labelID).toggleClass('active');
+    $('body').toggleClass('modal-open');
+  });
+
+  // closes all modals when user hits esc key
+  $(document).keydown(function(e){
+    if(e.keyCode == 27) {
+      $('body').removeClass('modal-open');
+      $('.o-modal--input.active').removeClass('active')
+    }
+  });
+
   // Very inefficient way of showing subnavs, let a better man write this code
   $('.c-nav__menu-item--styleguide, .c-nav__submenu-item--styleguide').hover(function() {
     $('.c-nav__submenu-item--styleguide').toggleClass('is-active');
@@ -38,7 +53,7 @@ $( document ).ready(function() {
         } else if (textLength >= 24) {
             $(this).addClass("c-tab__item--long");
             if (!$(this).hasClass("c-tab__item--active")) {
-              var shortText = jQuery.trim(text).substring(0, 24)
+              var shortText = jQuery.trim(text).substring(0, 26)
                             .trim(this) + "...";
               $(this).text(shortText);
             }

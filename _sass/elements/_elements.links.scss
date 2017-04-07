@@ -3,6 +3,9 @@ a {
   &:hover, &:focus {
     color: $color-secondary-hover;
   }
+  &:visited {
+    color: inherit;
+  }
 }
 
 a {

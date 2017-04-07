@@ -1,6 +1,6 @@
 body.modal-open {
 	overflow: hidden;
-	position: fixed;
+	// position: fixed;
 }
 
 .o-modal, .o-modal__overlay {
@@ -17,17 +17,16 @@ body.modal-open {
   width: 0;
   opacity: 0;
   visibility: hidden;
-  overflow: hidden;
   cursor: pointer;
   transition: opacity 0.2s ease-in;
 }
 
 .o-modal__close {
   color: #000;
-  position: fixed;
+  position: absolute;
   right: $inuit-global-spacing-unit/2;
   top: $inuit-global-spacing-unit/2;
-  // padding: 8px;
+  z-index: 1;
   font-size: 24px;
   font-weight: bold;
   text-align: center;
@@ -40,6 +39,15 @@ body.modal-open {
 			font-size: 40px;
 	  }
 	}
+	.o-modal--photo & {
+		@include mq($until: tablet) {
+			color: $color-black-disabled;
+			&:hover {
+				color: darken($color-black-disabled, 20%);
+			}
+		}
+	}
+
 }
 
 .o-modal {
@@ -55,7 +63,6 @@ body.modal-open {
 	pointer-events: auto;
 	cursor: auto;
 	box-shadow: $drop-shadow-5;
-	overflow: scroll;
 	@include mq($from: desktop) {
 		min-width: 900px;
 		top: 50%;
@@ -74,7 +81,7 @@ body.modal-open {
 	bottom: 0;
 	left: 0;
 	transform: none;
-	overflow: scroll;
+	overflow-y: scroll;
 }
 
 .o-modal__overlay {
@@ -90,16 +97,79 @@ body.modal-open {
 
 .o-modal--input {
   display: none;
-  &.active ~ .o-modal__overlay,
-  &:checked ~ .o-modal__overlay {
+  &.active ~ .o-modal__overlay/*,
+  &:checked ~ .o-modal__overlay*/ {
     z-index: $z-index-modal;
     visibility: visible;
     opacity: 1;
   }
-	&.active ~ .o-modal__container .o-modal,
-  &:checked ~ .o-modal__container .o-modal {
+	&.active ~ .o-modal__container .o-modal/*,
+  &:checked ~ .o-modal__container .o-modal*/ {
     opacity: 1;
 		z-index: $z-index-modal*1.01;
     visibility: visible;
   }
+}
+
+.o-modal__arrow {
+	z-index: 1;
+	position: absolute;
+	top: 50%;
+  transform: translateY(-50%);
+	color: $color-black;
+	@include mq($until: desktop) {
+		color: $color-black;
+	}
+	@include mq($until: tablet) {
+		color: white;
+		top: 25%;
+		transform: translateY(-25%);
+	}
+	&:hover {
+		color: darken($color-black-disabled, 20%);
+	}
+	&:before {
+		font-family: $material-icon-font-family;
+		font-size: 40px;
+	}
+}
+
+.o-modal.o-modal--photo {
+	.o-crop {
+		background:$color-black;
+	}
+	@include mq($until: tablet) {
+		max-width: 420px;
+		margin: 0 auto;
+  }
+}
+
+.o-modal__arrow--prev {
+	left: -48px;
+	&:before {
+		content: '\F141';
+	}
+	@include mq($until: desktop) {
+		left: 0px;
+	}
+}
+
+.o-modal__arrow--next {
+	right: -48px;
+	&:before {
+		content: '\F142';
+	}
+	@include mq($until: desktop) {
+		right: 0px;
+	}
+}
+
+.o-modal__image {
+
+}
+
+.o-modal__desc {
+	@include mq($until: tablet) {
+		padding: $inuit-global-spacing-unit/2 $inuit-global-spacing-unit/2 $inuit-global-spacing-unit/2 $inuit-global-spacing-unit;
+	}
 }
