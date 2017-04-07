@@ -33,12 +33,12 @@ $( document ).ready(function() {
     var text =$(this).html();
         if (textLength < 18) {
             $(this).addClass("c-tab__item--short");
-        } else if ((textLength >= 18) && (textLength < 30)) {
+        } else if ((textLength >= 18) && (textLength < 24)) {
             $(this).addClass("c-tab__item--long");
-        } else if (textLength >= 30) {
+        } else if (textLength >= 24) {
             $(this).addClass("c-tab__item--long");
             if (!$(this).hasClass("c-tab__item--active")) {
-              var shortText = jQuery.trim(text).substring(0, 30)
+              var shortText = jQuery.trim(text).substring(0, 24)
                             .trim(this) + "...";
               $(this).text(shortText);
             }
