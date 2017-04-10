@@ -1,24 +1,28 @@
-.c-menu {
+.c-page-menu {
+  margin: 0;
+  width: 100%;
 }
-.c-menu__item {
-  > a:first-child {
-    padding: ($inuit-global-spacing-unit/2);
-  }
-  &:after {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: ($inuit-global-spacing-unit/2);
-    font-family: 'FontAwesome';
-    content:'\f054';
-  }
-  .subtitle {
-    &:last-child {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      right: ($inuit-global-spacing-unit-huge);
-      text-align: right;
+
+.c-page-menu__item {
+  > a {
+    padding: $inuit-global-spacing-unit/2;
+    background-color: $color-primary;
+    &:hover, &:focus {
+      background-color: $color-black;
+      color: $color-white;
     }
+  }
+  &:first-child > a {
+    border-radius: $global-radius $global-radius 0 0;
+  }
+  &:last-child > a {
+    border-radius: 0 0 $global-radius $global-radius;
+  }
+}
+
+.c-page-menu__item--active {
+  > a {
+    background-color: $color-black;
+    color: $color-white;
   }
 }

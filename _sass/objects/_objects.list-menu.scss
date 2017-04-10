@@ -4,23 +4,17 @@
   margin-left: 0;
 }
 
-li.o-list-menu__item {
+.o-list-menu__item {
   position: relative;
   cursor: pointer;
   margin-bottom: 0;
-  &:first-child {
-    margin-top: $inuit-global-spacing-unit-tiny;
-  }
-  &:last-child {
-    margin-bottom: $inuit-global-spacing-unit-tiny;
-  }
   > a {
     padding: $inuit-global-spacing-unit/2 $inuit-global-spacing-unit*1.66666 $inuit-global-spacing-unit/2 $inuit-global-spacing-unit/2;
     white-space: nowrap;
     font-size: 14px;
     line-height: 24px;
+    color: $color-black;
     &:first-child {
-      color: initial;
       display:block;
       cursor: pointer;
     }
@@ -30,7 +24,7 @@ li.o-list-menu__item {
   }
 }
 
-li.o-list-menu__item--selected {
+.o-list-menu__item--selected {
   a {
     background-color: $color-gray-light;
     &:after {

@@ -1,33 +1,33 @@
 <div class="c-nav__container">
   <nav class="c-nav">
-    <ul class="o-list-menu c-page-menu">
+    <ul class="o-list-menu">
 
-      <li class="c-nav__menu-item c-nav__menu-item--styleguide o-list-menu__item c-page-menu__item">
+      <li class="c-nav__menu-item c-nav__menu-item--styleguide o-list-menu__item">
         <a href="#">Styleguide</a>
       </li>
-      <li class="c-nav__menu-item c-nav__menu-item--components o-list-menu__item c-page-menu__item">
+      <li class="c-nav__menu-item c-nav__menu-item--components o-list-menu__item">
         <a href="#">UI Components</a>
       </li>
-      <li class="c-nav__menu-item c-nav__menu-item--samples o-list-menu__item c-page-menu__item">
+      <li class="c-nav__menu-item c-nav__menu-item--samples o-list-menu__item">
         <a href="#">Sample Pages</a>
       </li>
 
     </ul>
   </nav>
   <nav class="c-nav c-nav__sub-menu">
-    <ul class="o-list-menu c-page-menu c-nav__submenu-item c-nav__submenu-item--styleguide">
+    <ul class="o-list-menu c-nav__submenu-item c-nav__submenu-item--styleguide">
       {% for page in site.styleguide %}
-        <li class="c-nav__menu-item o-list-menu__item c-page-menu__item"><a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></li>
+        <li class="c-nav__menu-item o-list-menu__item"><a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></li>
       {% endfor %}
     </ul>
-    <ul class="o-list-menu c-page-menu c-nav__submenu-item c-nav__submenu-item--components">
+    <ul class="o-list-menu c-nav__submenu-item c-nav__submenu-item--components">
       {% for page in site.components %}
-        <li class="c-nav__menu-item o-list-menu__item c-page-menu__item"><a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></li>
+        <li class="c-nav__menu-item o-list-menu__item"><a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></li>
       {% endfor %}
     </ul>
-    <ul class="o-list-menu c-page-menu c-nav__submenu-item c-nav__submenu-item--samples">
+    <ul class="o-list-menu c-nav__submenu-item c-nav__submenu-item--samples">
       {% for page in site.samples %}
-        <li class="c-nav__menu-item o-list-menu__item c-page-menu__item"><a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></li>
+        <li class="c-nav__menu-item o-list-menu__item"><a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></li>
       {% endfor %}
     </ul>
   </nav>

@@ -33,9 +33,10 @@ header {
   max-width: 92%;
 }
 
-.c-nav__menu {
+.c-nav {
   vertical-align: middle;
   ul {
+    width: 100%;
     margin-bottom: 0;
     li {
       &:hover > ul, ul:hover {
@@ -45,7 +46,6 @@ header {
   }
   .c-nav__menu-item {
     position: relative;
-    padding: $inuit-global-spacing-unit $inuit-global-spacing-unit/2;
     a {
       &:hover {
         background: $color-primary;
