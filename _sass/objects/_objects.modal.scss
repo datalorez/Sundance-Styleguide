@@ -170,6 +170,13 @@ body.modal-open {
 
 .o-modal__desc {
 	@include mq($until: tablet) {
-		padding: $inuit-global-spacing-unit/2 $inuit-global-spacing-unit/2 $inuit-global-spacing-unit/2 $inuit-global-spacing-unit;
+		padding: $inuit-global-spacing-unit $inuit-global-spacing-unit $inuit-global-spacing-unit $inuit-global-spacing-unit;
+	}
+	@include mq($from: mobile) {
+		padding: $inuit-global-spacing-unit $inuit-global-spacing-unit $inuit-global-spacing-unit $inuit-global-spacing-unit-large;
+	}
+	@include mq($from: desktop) {
+		padding: 0;
+		padding-left: $inuit-global-spacing-unit;
 	}
 }
