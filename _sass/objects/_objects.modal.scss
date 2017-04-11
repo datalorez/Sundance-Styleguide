@@ -180,3 +180,10 @@ body.modal-open {
 		padding-left: $inuit-global-spacing-unit;
 	}
 }
+
+.o-modal__tags {
+	span {
+		display: block;
+		margin-bottom: $inuit-global-spacing-unit-tiny;
+	}
+}

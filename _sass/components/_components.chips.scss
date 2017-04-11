@@ -1,0 +1,64 @@
+.c-chip {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  margin: 0 $inuit-global-spacing-unit-tiny $inuit-global-spacing-unit-tiny 0;
+  cursor: pointer;
+  padding: $inuit-global-spacing-unit-tiny/2 $inuit-global-spacing-unit-tiny;
+  transition: $global-transition;
+  border-radius: $global-radius;
+  text-transform: lowercase;
+  font-size: 14px;
+  color: $color-black;
+  background: $color-primary;
+  box-shadow: $drop-shadow-1;
+  &:hover {
+    box-shadow: $drop-shadow-2;
+    color: inherit;
+  }
+  @include mq($until: tablet) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.c-chip--removeable {
+  position: relative;
+  padding: $inuit-global-spacing-unit-tiny/2 $inuit-global-spacing-unit $inuit-global-spacing-unit-tiny/2 $inuit-global-spacing-unit-tiny;
+  &:after {
+    position:absolute;
+    right: $inuit-global-spacing-unit-tiny/2;
+    font: normal normal normal 16px/1 "MaterialIcons";
+    content: '\F156';
+    padding: $inuit-global-spacing-unit-tiny/2 0;
+  }
+  @include mq($until: tablet) {
+    &:after {
+      padding: $inuit-global-spacing-unit-tiny/8 0;
+    }
+  }
+
+}
+
+.c-chip--suggested {
+  position: relative;
+  padding: $inuit-global-spacing-unit-tiny/2 $inuit-global-spacing-unit $inuit-global-spacing-unit-tiny/2 $inuit-global-spacing-unit-tiny;
+  background-color: $color-white;
+  border: solid 1px $color-black-disabled;
+  color: darken($color-black-disabled, 10%);
+  &:hover {
+    color: darken($color-black-disabled, 10%);
+  }
+  &:after {
+    position:absolute;
+    right: $inuit-global-spacing-unit-tiny/2;
+    font: normal normal normal 16px/1 "MaterialIcons";
+    content: '\F415';
+    padding: $inuit-global-spacing-unit-tiny/2 0;
+  }
+  @include mq($until: tablet) {
+    &:after {
+      padding: $inuit-global-spacing-unit-tiny/8 0;
+    }
+  }
+}
