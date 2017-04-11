@@ -18,7 +18,10 @@ p, label, span, ul, li {
 }
 
 p + h1, p + h2, p + h3, p + h4, p + h5, p + h6 {
-  margin-top: $inuit-global-spacing-unit-large;
+  margin-top: $inuit-global-spacing-unit-huge;
+  @include mq($until: tablet) {
+    margin-top: $inuit-global-spacing-unit-large;
+  }
 }
 
 label {

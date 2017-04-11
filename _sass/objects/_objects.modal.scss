@@ -18,7 +18,7 @@ body.modal-open {
   opacity: 0;
   visibility: hidden;
   cursor: pointer;
-  transition: opacity 0.2s ease-in;
+  transition: $global-transition;
 }
 
 .o-modal__close {
@@ -92,7 +92,7 @@ body.modal-open {
 	top: 0;
 	bottom: 0;
 	right: 0;
-	transition: opacity 0.2s ease-in;
+	transition: $global-transition;
 }
 
 .o-modal--input {

@@ -30,5 +30,6 @@ $drop-shadow-5: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
  */
 
 $z-index-hidden: -100000;
-$z-index-modal: 100;
-$z-index-nav: 50;
+$z-index-modal: 1000;
+$z-index-menu: 200;
+$z-index-nav: 100;

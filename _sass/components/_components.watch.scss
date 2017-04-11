@@ -5,6 +5,9 @@
 .c-watch__item {
   min-width: 161px;
   margin-bottom: $inuit-global-spacing-unit;
+  .o-list-menu {
+    margin-bottom: 0;
+  }
 }
 
 .c-watch__item-icon {

@@ -1,6 +1,20 @@
 $( document ).ready(function() {
 
 
+  // Toggles dropdown menus, closes when you click outside. 
+  $('html').click(function() {
+    $('.c-dropdown').removeClass("c-dropdown--active");
+  });
+
+  $(".o-list-menu__item").click (function(e){
+    e.stopPropagation();
+    $(this).children('.c-dropdown').toggleClass("c-dropdown--active");
+  });
+
+   $('.c-dropdown').click (function(e){
+    e.stopPropagation();
+  });
+
   // Toggles nav menu
   $('.c-nav__icon').on('click', function(){
     if ($('.o-content__inner').hasClass('is-open')) {
