@@ -1,0 +1,46 @@
+footer {
+  h3 {
+    margin-bottom: $inuit-global-spacing-unit-small;
+  }
+  ul, lu, span {
+    font-size: 14px;
+  }
+  a {
+    color: $color-white;
+    &:hover, &:focus {
+      color: $color-primary
+    }
+  }
+  .o-list-bare {
+    // margin-left: $inuit-global-spacing-unit-tiny;
+    li {
+      margin: 0;
+    }
+  }
+  .c-icons__social--primary, .c-icons__social--secondary {
+    width: 50%;
+    text-align: center;
+    float: left;
+    li {
+      margin-bottom: $inuit-global-spacing-unit;
+    }
+    @include mq($until: desktop) {
+      width: 100%;
+      li {
+        display: inline-block;
+        margin-right: $inuit-global-spacing-unit;
+        margin-bottom: 0;
+      }
+    }
+  }
+  .c-icons__social--primary {
+    .fa {
+      font-size: 30px;
+    }
+  }
+  .c-icons__social--secondary {
+    .fa {
+      font-size: 20px;
+    }
+  }
+}

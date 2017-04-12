@@ -4,6 +4,10 @@
   color: $color-white;
 }
 
+.o-color--white-secondary, .o-color--white-secondary > * {
+  color: $color-white-secondary;
+}
+
 .o-color--primary {
   color: $color-primary;
 }

@@ -23,8 +23,9 @@
   text-align: center; /* [4] */
   margin: 0; /* [4] */
   cursor: pointer; /* [5] */
-  padding: $inuit-global-spacing-unit/2 $inuit-global-spacing-unit;
+  padding: 11px $inuit-global-spacing-unit;
   transition: $global-transition;
+  border: solid 1px transparent;
   border-radius: $global-radius;
   text-transform: uppercase;
   font-weight: bold;

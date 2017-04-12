@@ -1,0 +1,64 @@
+<!-- email signup -->
+<div id="mc_embed_signup" class="o-layout">
+  <form id="mc-embedded-subscribe-form" class="validate ng-pristine ng-valid" action="//sundance.us10.list-manage.com/subscribe/post?u=d2b7ca60af6d00b0be91a01af&amp;id=874220b756" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank" _lpchecked="1">
+    <div class="mc-field-group o-layout__item  o-spacer__bottom--small u-1/4@desktop u-1/3@tablet">
+        <input id="mce-FNAME" class="" name="FNAME" type="text" value="" placeholder="First Name" autocapitalize="words" autocorrect="off" autocomplete="name" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAfBJREFUWAntVk1OwkAUZkoDKza4Utm61iP0AqyIDXahN2BjwiHYGU+gizap4QDuegWN7lyCbMSlCQjU7yO0TOlAi6GwgJc0fT/fzPfmzet0crmD7HsFBAvQbrcrw+Gw5fu+AfOYvgylJ4TwCoVCs1ardYTruqfj8fgV5OUMSVVT93VdP9dAzpVvm5wJHZFbg2LQ2pEYOlZ/oiDvwNcsFoseY4PBwMCrhaeCJyKWZU37KOJcYdi27QdhcuuBIb073BvTNL8ln4NeeR6NRi/wxZKQcGurQs5oNhqLshzVTMBewW/LMU3TTNlO0ieTiStjYhUIyi6DAp0xbEdgTt+LE0aCKQw24U4llsCs4ZRJrYopB6RwqnpA1YQ5NGFZ1YQ41Z5S8IQQdP5laEBRJcD4Vj5DEsW2gE6s6g3d/YP/g+BDnT7GNi2qCjTwGd6riBzHaaCEd3Js01vwCPIbmWBRx1nwAN/1ov+/drgFWIlfKpVukyYihtgkXNp4mABK+1GtVr+SBhJDbBIubVw+Cd/TDgKO2DPiN3YUo6y/nDCNEIsqTKH1en2tcwA9FKEItyDi3aIh8Gl1sRrVnSDzNFDJT1bAy5xpOYGn5fP5JuL95ZjMIn1ya7j5dPGfv0A5eAnpZUY3n5jXcoec5J67D9q+VuAPM47D3XaSeL4AAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+    </div>
+    <div class="mc-field-group o-layout__item  o-spacer__bottom--small u-1/4@desktop u-1/3@tablet">
+        <input id="mce-EMAIL" class="required email" name="EMAIL" type="email" placeholder="Your Email" autocapitalize="off" autocorrect="off" autocomplete="email">
+    </div>
+    <div class="mc-field-group input-group" style="display: none;">
+        <ul>
+            <li>
+                <label for="mce-group[5429]-5429-14">Sundance Film Festival</label>
+                <input id="mce-group[5429]-5429-14" checked="checked" name="group[5429][16384]" type="checkbox" value="16384">
+            </li>
+            <li>
+                <label for="mce-group[5429]-5429-15">Sundance Institute</label>
+                <input id="mce-group[5429]-5429-15" checked="checked" name="group[5429][32768]" type="checkbox" value="32768"></li>
+        </ul>
+    </div>
+    <div style="position: absolute; left: -5000px;">
+        <input tabindex="-1" name="b_d2b7ca60af6d00b0be91a01af_874220b756" type="text" value="">
+    </div>
+    <div class="o-layout__item  o-spacer__bottom--small u-1/6@desktop u-1/3@tablet">
+        <input id="mc-embedded-subscribe" class="c-btn c-btn--secondary c-btn--full" name="subscribe" type="submit" value="Subscribe">
+        <input id="SIGNUPLOCA" name="SIGNUPLOCA" type="hidden" value="Footer">
+        <input id="SIGNUPURL" name="SIGNUPURL" type="hidden" value="">
+        <input id="PREVPAGE" name="PREVPAGE" type="hidden" value="">
+        <input id="QUERYPARAM" name="QUERYPARAM" type="hidden" value="">
+    </div>
+    <div id="mce-responses" class="clear">&nbsp;</div>
+  </form>
+</div>
+<script>
+    $(document)
+        .ready(function () {
+
+            $('input.required.email')
+                .focus(function () {
+                    var p  = window.location.pathname;
+                    var q  = location.search;
+                    var pr = document.referrer;
+                    $('input[name="SIGNUPURL"]')
+                        .val(p);
+                    $('input[name="QUERYPARAM"]')
+                        .val(q);
+                    $('input[name="PREVPAGE"]')
+                        .val(pr);
+                    /**/
+                    console.log("SIGNUPURL : " + p);
+                    console.log("QUERYPARAM : " + q);
+                    console.log("PREVPAGE : " + pr);
+                    console.log("-------------");
+                    /**/
+                });
+            $('input[name = "EMAIL"]')
+                .focus(function () {
+                    var n = window.location.pathname;
+                    $('input[name = "SIGNUPURL"]')
+                        .val(n);
+                });
+        });
+</script>
+<!-- end email signup -->
