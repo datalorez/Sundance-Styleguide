@@ -3,8 +3,9 @@
 //   ======================================================================== */
 
 $color-black: #000000;
+$color-black-mid: lighten($color-black, 50%);
 $color-black-hover: lighten($color-black, 25%);
-$color-black-disabled: lighten($color-black, 90%);
+$color-black-disabled: lighten($color-black, 75%);
 $color-black-overlay: opacify(#000000, 0.38);
 
 $color-gray:#333333;

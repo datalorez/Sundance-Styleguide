@@ -1,54 +1,103 @@
 ---
 layout: page
-title: Inputs
-permalink: /inputs/
+title: Forms
+permalink: /Forms/
 ---
 
 <div class="o-wrapper">
-  <div class="o-layout o-section">
-    <div class="o-checkbox o-layout__item u-1/1">
-      <h3>Text Inputs</h3>
-    </div>
-    <div class="o-checkbox o-layout__item u-1/1">
-      <label>Text Input</label>
-      <input placeholder="Input Text">
-    </div>
-    <div class="o-checkbox o-layout__item u-1/1">
-      <label>Text Areas</label>
-      <textarea rows="4" cols="50"></textarea>
-    </div>
-  </div>
+  <form class="" action="index.html" method="post">
+    <div class="o-layout o-spacer__top--large o-spacer__bottom--large o-section">
 
-  <div class="o-layout o-section">
-    <div class="o-checkbox o-layout__item u-1/1">
-      <h3>Checkboxes</h3>
-    </div>
-    <div class="o-layout__item u-1/4">
-      <div class="o-checkbox">
-        <label><input class="styled" type="checkbox">Default</label>
+      <div class="o-layout__item u-1/1">
+        <h1>Forms</h1>
+      </div>
+
+      <div class="o-layout__item u-1/2@desktop  o-spacer__bottom--small">
+        <h3>Text Inputs</h3>
+<pre><code class="language-html">
+&lt;div class=&quot;o-form__input-container&quot;&gt;
+  &lt;input type=&quot;text&quot; placeholder=&quot; &quot;&gt;
+  &lt;label&gt;Full Name&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;o-form__input-container&quot;&gt;
+  &lt;input type=&quot;email&quot; placeholder=&quot; &quot; required&gt;
+  &lt;label&gt;Email Address&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;o-form__input-container&quot;&gt;
+  &lt;textarea rows=&quot;4&quot; cols=&quot;50&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+</code></pre>
+      </div>
+
+      <div class="o-layout__item u-1/2@desktop o-spacer__bottom--small">
+        <div class="o-form__input-container">
+          <input type="number" placeholder=" ">
+          <label>Number Input</label>
+        </div>
+        <div class="o-form__input-container">
+          <input type="text" placeholder=" ">
+          <label>Full Name</label>
+        </div>
+        <div class="o-form__input-container">
+          <input type="text" placeholder=" " disabled="disabled">
+          <label>Disabled</label>
+        </div>
+        <div class="o-form__input-container">
+          <input type="email" placeholder=" " required>
+          <label>Email Address</label>
+        </div>
+        <div class="o-form__input-container">
+          <textarea rows="4" cols="50"></textarea>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div>
-    <label>Toggle Switch</label>
-    <label>
-      <input type="hidden" value="0">
-      <input type="checkbox" value="1">
-      Toggle
-    </label>
-  </div>
+    <div class="o-layout o-spacer__top--large o-spacer__bottom--large o-section">
+      <div class="o-layout__item u-1/4@desktop u-1/2">
+        <h3>Checkboxes</h3>
+        <div style="margin-top: 24px;">
+          <input type="checkbox" id="checkbox1"/>
+          <label for="checkbox1">Enabled</label>
+        </div>
+        <div style="margin-top: 24px;">
+          <input type="checkbox" id="checkbox2" checked="checked"/>
+          <label for="checkbox2">Checked</label>
+        </div>
+        <div style="margin-top: 24px;">
+          <input type="checkbox" id="checkbox3" checked="checked" disabled="disabled"/>
+          <label for="checkbox3">Disabled/Checked</label>
+        </div>
+        <div style="margin-top: 24px;">
+          <input type="checkbox" id="checkbox4" disabled="disabled"/>
+          <label for="checkbox4">Disabled</label>
+        </div>
+      </div>
 
-  <div>
-    <label>Radio Buttons</label>
-    <input type="radio" name="radio1" checked="">
-    <label>Radio Button</label>
-  </div>
+      <div class="o-checkbox o-layout__item u-1/4@desktop u-1/2">
+        <h3>Radio Buttons</h3>
+        <div style="margin-top: 24px;">
+          <input type="radio" id="radio1" name="radio" checked="checked">
+          <label for="radio1">Default Option</label>
+        </div>
+        <div style="margin-top: 24px;">
+          <input type="radio" id="radio2" name="radio">
+          <label for="radio2">Option</label>
+        </div>
+        <div style="margin-top: 24px;">
+          <input type="radio" id="radio3" name="radio">
+          <label for="radio3">Option</label>
+        </div>
+        <div style="margin-top: 24px;">
+          <input type="radio" id="radio4" name="radio" disabled="disabled">
+          <label for="radio4">Disabled Option</label>
+        </div>
+      </div>
 
-  <div>
-    <label>Range Slider</label>
-    <input type="hidden" value="0">
-    <input type="checkbox" value="1">
-    <label>Slider</label>
-  </div>
+      <div class="o-checkbox o-layout__item u-1/2@desktop u-1/1">
+        <h3>Range Slider</h3>
+        <p>Coming soon...</p>
+      </div>
+
+    </div>
+  </form>
 </div>

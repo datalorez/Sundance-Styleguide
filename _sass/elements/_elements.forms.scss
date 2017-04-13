@@ -14,34 +14,272 @@ select,
 textarea,
 button {
   line-height: 1.5rem;
-  border: solid 1px $color-black-disabled;
+  border: solid 1px $color-black-mid;
   border-radius: $global-radius;
   &.c-btn {
     border: solid 1px transparent;
   }
 }
 
+::-webkit-input-placeholder {
+  color: transparent;
+  font-weight: normal;
+}
+:-moz-placeholder {
+  color: transparent;
+}
+::-moz-placeholder {
+  color: transparent;
+}
+:-ms-input-placeholder {
+  color: transparent;
+}
+
 input:focus,
 select:focus,
 textarea:focus,
 button:focus {
-  outline:none;
-  border: solid 1px $color-black;
+  outline: none;
+  border: solid 1px $color-primary;
   .c-background__black & {
     border: solid 1px $color-primary;
   }
 }
 
-::-webkit-input-placeholder {
-  color: $color-black-disabled;
-  font-weight: normal;
+// TEXT INPUT STYLES
+input[type="text"]:disabled {
+  border: solid 1px $color-black-disabled;
+  background-color: lighten($color-black, 90%);
 }
-:-moz-placeholder {
-  color: $color-black-disabled;
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+  &:required + label {
+    &:after {
+      content:'*';
+      color: $color-accent-1;
+      margin-left: $inuit-global-spacing-unit-tiny/2;
+    }
+  }
+  & + label {
+    color: $color-black-disabled;
+    position:absolute;
+    pointer-events:none;
+    left:$inuit-global-spacing-unit-tiny;
+    top:11px;
+    transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -webkit-transition:0.2s ease all;
+  }
+  &:focus + label {
+    top:-24px;
+    font-size:14px;
+    color: $color-black-disabled;
+  }
+  &:valid:not(:focus):not(:placeholder-shown) {
+    & + label {
+      top:-24px;
+      font-size:14px;
+      color: $color-accent-2;
+      &:after {
+        position: relative;
+        right: -$inuit-global-spacing-unit-tiny/2;
+        font: normal normal normal 16px/1 "MaterialIcons";
+        content:'\F12C';
+        color: $color-accent-2;
+      }
+    }
+  }
+  &:valid:focus:not(:placeholder-shown) {
+    & + label {
+      top:-24px;
+      font-size:14px;
+      color: $color-black-disabled;
+    }
+  }
+  &:invalid:focus:not(:placeholder-shown) {
+    & + label {
+      top:-24px;
+      font-size:14px;
+      color: $color-black-disabled;
+    }
+  }
+  &:invalid:not(:focus):not(:placeholder-shown) {
+    & + label {
+      top:-24px;
+      font-size:14px;
+      color: $color-accent-1;
+      &:after {
+        position: relative;
+        right: -$inuit-global-spacing-unit-tiny/2;
+        font: normal normal normal 16px/1 "MaterialIcons";
+        content:'\F026';
+        color: $color-accent-1;
+      }
+    }
+  }
 }
-::-moz-placeholder {
-  color: $color-black-disabled;
-}
-:-ms-input-placeholder {
-  color: $color-black-disabled;
+
+form {
+  // CUSTOM CHECKBOX STYLES
+
+  [type="checkbox"]:not(:checked),
+  [type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+  }
+
+  [type="checkbox"]:not(:checked) + label,
+  [type="checkbox"]:checked + label {
+    position: relative;
+    padding-left: $inuit-global-spacing-unit + $inuit-global-spacing-unit-tiny;
+    cursor: pointer;
+  }
+
+
+  [type="checkbox"]:not(:checked) + label:before,
+  [type="checkbox"]:checked + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: $inuit-global-spacing-unit;
+    height: $inuit-global-spacing-unit;
+    border-radius: $global-radius;
+  }
+
+  [type="checkbox"]:not(:checked) + label:before {
+    border: 1px solid $color-black-mid;
+  }
+
+  [type="checkbox"]:checked + label:before {
+    border: 1px solid $color-primary !important;
+    background: $color-primary !important;
+  }
+
+
+  [type="checkbox"]:not(:checked) + label:after,
+  [type="checkbox"]:checked + label:after {
+    font: normal normal normal 16px/1 "MaterialIcons";
+    content:'\F12C';
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 24px;
+    line-height: 1;
+    color: $color-gray;
+    transition: all .2s;
+  }
+
+  [type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  [type="checkbox"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  [type="checkbox"]:disabled:not(:checked) + label:before,
+  [type="checkbox"]:disabled:checked + label:before {
+    box-shadow: none;
+    border-color: $color-black-disabled;
+    background-color: $color-black-disabled;
+  }
+
+  [type="checkbox"]:disabled:checked + label:after {
+    color: $color-black-disabled;
+  }
+
+  [type="checkbox"]:disabled + label {
+    color: $color-black-disabled;
+  }
+
+  [type="checkbox"]:checked:focus + label:before,
+  [type="checkbox"]:not(:checked):focus + label:before {
+    border: 1px solid $color-black;
+  }
+
+  // CUSTOM RADIO STYLES
+
+  [type="radio"],
+  [type="radio"]:checked {
+    position: absolute;
+    left: -9999px;
+  }
+
+  [type="radio"] + label,
+  [type="radio"]:checked + label {
+    position: relative;
+    padding-left: $inuit-global-spacing-unit + $inuit-global-spacing-unit-tiny;
+    cursor: pointer;
+  }
+
+
+  [type="radio"] + label:before,
+  [type="radio"]:checked + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: $inuit-global-spacing-unit;
+    height: $inuit-global-spacing-unit;
+    border-radius: 50%;
+  }
+
+  [type="radio"] + label:before {
+    border: 1px solid $color-black-mid;
+  }
+
+  [type="radio"]:checked + label:before {
+    border: 1px solid $color-primary !important;
+    background: $color-primary !important;
+  }
+
+
+  [type="radio"] + label:after,
+  [type="radio"]:checked + label:after {
+    content:'';
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: $inuit-global-spacing-unit/2;
+    height: $inuit-global-spacing-unit/2;
+    line-height: 1;
+    background-color: $color-black;
+    border-radius: 50%;
+    transition: all .2s;
+  }
+
+  [type="radio"] + label:after {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  [type="radio"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  [type="radio"]:disabled + label:before,
+  [type="radio"]:disabled:checked + label:before {
+    box-shadow: none;
+    border-color: $color-black-disabled;
+  }
+
+  [type="radio"]:disabled:checked + label:after {
+    color: $color-black-disabled;
+  }
+
+  [type="radio"]:disabled + label {
+    color: $color-black-disabled;
+  }
+
+  [type="radio"]:checked:focus + label:before,
+  [type="radio"]:focus + label:before {
+    border: 1px solid $color-black;
+  }
 }
