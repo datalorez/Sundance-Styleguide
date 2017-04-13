@@ -5,8 +5,14 @@ permalink: /menus/
 ---
 <div class="o-wrapper">
   <div class="o-layout o-section">
-    <div class="o-layout__item u-2/3">
+
+    <div class="o-layout__item u-1/1 o-spacer__top--large o-spacer__bottom--large">
+      <h1>Menus</h1>
+    </div>
+    <div class="o-layout__item u-1/2@desktop o-spacer__bottom--small">
       <h3>Dropdown Menus</h3>
+    </div>
+    <div class="o-layout__item u-1/2@desktop o-spacer__bottom--small">
       <ul class="o-list-menu">
         <li class="o-list-menu__item c-dropdown__button"><a>Filter by Program</a>
           <ul class="o-list-menu c-dropdown">
@@ -28,8 +34,35 @@ permalink: /menus/
         </li>
       </ul>
     </div>
-    <div class="o-layout__item u-1/3">
+    <div class="o-layout__item u-1/1 o-spacer__bottom--large">
+<pre><code class="language-html">
+&lt;ul class=&quot;o-list-menu&quot;&gt;
+  &lt;li class=&quot;o-list-menu__item c-dropdown__button&quot;&gt;&lt;a&gt;Filter by Program&lt;/a&gt;
+    &lt;ul class=&quot;o-list-menu c-dropdown&quot;&gt;
+      &lt;li class=&quot;o-list-menu__item o-list-menu__item--selected&quot;&gt;&lt;a&gt;Sundance Film Festival&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;o-list-menu__item&quot;&gt;&lt;a&gt;Feature Film&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;o-list-menu__item o-list-menu__item--selected&quot;&gt;&lt;a&gt;Documentary Film&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;o-list-menu__item&quot;&gt;&lt;a&gt;Theatre&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class=&quot;o-list-menu&quot;&gt;
+  &lt;li class=&quot;o-list-menu__item c-dropdown__button&quot;&gt;&lt;a&gt;Filter by Event Type&lt;/a&gt;
+    &lt;ul class=&quot;o-list-menu c-dropdown&quot;&gt;
+      &lt;li class=&quot;o-list-menu__item o-list-menu__item--selected&quot;&gt;&lt;a&gt;Screening&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;o-list-menu__item&quot;&gt;&lt;a&gt;Party&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;o-list-menu__item o-list-menu__item--selected&quot;&gt;&lt;a&gt;Reception&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;o-list-menu__item&quot;&gt;&lt;a&gt;Workshop&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+    </div>
+
+    <div class="o-layout__item u-2/3@desktop o-spacer__bottom--small">
       <h3>Page Menu</h3>
+    </div>
+    <div class="o-layout__item u-1/3@desktop o-spacer__bottom--small">
       <div class="">
         <ul class="o-list-menu c-page-menu">
           <li class="o-list-menu__item c-page-menu__item"><a>Menu Item #1</a></li>
@@ -39,21 +72,18 @@ permalink: /menus/
         </ul>
       </div>
     </div>
-  </div>
-
-  <div class="o-wrapper">
-    <div class="o-layout o-section">
-      <div class="o-layout__item u-1/1">
-        &nbsp;
-      </div>
-      <div class="o-layout__item u-1/1">
-        &nbsp;
-      </div>
-      <div class="o-layout__item u-1/1">
-        &nbsp;
-      </div>
+    <div class="o-layout__item u-1/1 o-spacer__bottom--large">
+<pre><code class="language-html">
+&lt;ul class=&quot;o-list-menu c-page-menu&quot;&gt;
+  &lt;li class=&quot;o-list-menu__item c-page-menu__item&quot;&gt;&lt;a&gt;Menu Item #1&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;o-list-menu__item c-page-menu__item c-page-menu__item--active&quot;&gt;&lt;a&gt;Selected Menu Item #2&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;o-list-menu__item c-page-menu__item&quot;&gt;&lt;a&gt;Menu Item #3&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;o-list-menu__item c-page-menu__item&quot;&gt;&lt;a&gt;Menu Item #4&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
     </div>
   </div>
+
 
   <!-- <div class="o-layout o-section">
     <div class="o-layout__item u-1/1">

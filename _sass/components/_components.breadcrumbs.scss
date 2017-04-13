@@ -1,5 +1,5 @@
 .c-breadcrumb {
-  margin-bottom: 8px;
+  margin-bottom: $inuit-global-spacing-unit-tiny;
   @include mq($until: tablet) {
     display:none;
   }
