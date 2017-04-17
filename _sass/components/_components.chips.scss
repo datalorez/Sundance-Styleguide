@@ -22,43 +22,29 @@
   }
 }
 
-.c-chip--removeable {
+.c-chip--removeable, .c-chip--suggested {
   position: relative;
   padding: $inuit-global-spacing-unit-tiny/2 $inuit-global-spacing-unit $inuit-global-spacing-unit-tiny/2 $inuit-global-spacing-unit-tiny;
   &:after {
     position:absolute;
     right: $inuit-global-spacing-unit-tiny/2;
-    font: normal normal normal 16px/1 "MaterialIcons";
-    content: '\F156';
-    padding: $inuit-global-spacing-unit-tiny/2 0;
-  }
-  @include mq($until: tablet) {
-    &:after {
+    padding: $inuit-global-spacing-unit-tiny/4 0;
+    @include mq($until: tablet) {
       padding: $inuit-global-spacing-unit-tiny/8 0;
     }
   }
+}
 
+.c-chip--removeable {
+  @include icon(after, close);
 }
 
 .c-chip--suggested {
-  position: relative;
-  padding: $inuit-global-spacing-unit-tiny/2 $inuit-global-spacing-unit $inuit-global-spacing-unit-tiny/2 $inuit-global-spacing-unit-tiny;
   background-color: $color-white;
   border: solid 1px $color-black-disabled;
   color: darken($color-black-disabled, 10%);
   &:hover {
     color: darken($color-black-disabled, 10%);
   }
-  &:after {
-    position:absolute;
-    right: $inuit-global-spacing-unit-tiny/2;
-    font: normal normal normal 16px/1 "MaterialIcons";
-    content: '\F415';
-    padding: $inuit-global-spacing-unit-tiny/2 0;
-  }
-  @include mq($until: tablet) {
-    &:after {
-      padding: $inuit-global-spacing-unit-tiny/8 0;
-    }
-  }
+  @include icon(after, plus);
 }

@@ -1,0 +1,38 @@
+---
+layout: page
+title: Icons
+permalink: /styleguide/icons/
+---
+
+<div class="o-wrapper">
+  <div class="o-layout o-section o-spacer__top--large o-spacer__bottom--large">
+    <div class="o-layout__item u-1/1">
+      <h1>Icons</h1>
+    </div>
+  </div>
+  <div class="o-layout o-section o-spacer__bottom--large">
+    <div class="o-layout__item u-1/1">
+      <p>We use the <a href="https://materialdesignicons.com/" target="_blank">Material Design Icons</a>. There are multiple ways to include an icon. </p>
+    </div>
+  </div>
+  <div class="o-layout o-section o-spacer__bottom--large">
+    <div class="o-layout__item u-1/2@desktop">
+      <h3>via SASS</h3>
+      <p>To include an icon as a psuedo class (before or after).</p>
+<pre><code class="language-css">
+@include icon(before, check) {
+  /*
+  Specific Styles
+  */
+}
+</code></pre>
+    </div>
+    <div class="o-layout__item u-1/2@desktop">
+      <h3>via HTML</h3>
+      <p>To include an icon as a psuedo class (before or after).</p>
+<pre><code class="language-css">
+&lt;i class=&quot;mdi mdi-check&quot;&gt;&lt;/i&gt;
+</code></pre>
+    </div>
+  </div>
+</div>

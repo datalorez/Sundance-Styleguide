@@ -2,22 +2,21 @@
   position: relative;
   padding: $inuit-global-spacing-unit-tiny $inuit-global-spacing-unit-huge;
   background-color: $color-gray-light;
-  &:before {
+  @include icon(after, alert) {
     position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: $inuit-global-spacing-unit-tiny;
-    margin-left: $inuit-global-spacing-unit-tiny;
-    font-family: 'FontAwesome';
+    top: $inuit-global-spacing-unit-tiny;
+    left: $inuit-global-spacing-unit-tiny;
     font-size: 16px;
-    content: '\f071';
   }
 }
 .c-alert--success {
   background-color: $color-accent-2;
   color: $color-white;
-  &:before {
-    content:'\f00c';
+  @include icon(after, check) {
+    position: absolute;
+    top: $inuit-global-spacing-unit-tiny;
+    left: $inuit-global-spacing-unit-tiny;
+    font-size: 16px;
   }
 }
 

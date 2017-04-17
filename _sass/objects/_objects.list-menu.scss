@@ -27,12 +27,9 @@
 .o-list-menu__item--selected {
   a {
     background-color: $color-gray-light;
-    &:after {
+    @include icon(after, close) {
       position:absolute;
       right: $inuit-global-spacing-unit/2;
-      font: normal normal normal 16px/1 "MaterialIcons";
-      content: '\F156';
-      padding: $inuit-global-spacing-unit-tiny/2 0;
     }
   }
 }

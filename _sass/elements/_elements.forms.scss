@@ -83,12 +83,9 @@ input[type="number"] {
       top:-24px;
       font-size:14px;
       color: $color-accent-2;
-      &:after {
-        position: relative;
-        right: -$inuit-global-spacing-unit-tiny/2;
-        font: normal normal normal 16px/1 "MaterialIcons";
-        content:'\F12C';
+      @include icon(after, check) {
         color: $color-accent-2;
+        padding-left: $inuit-global-spacing-unit-tiny/4;
       }
     }
   }
@@ -111,11 +108,7 @@ input[type="number"] {
       top:-24px;
       font-size:14px;
       color: $color-accent-1;
-      &:after {
-        position: relative;
-        right: -$inuit-global-spacing-unit-tiny/2;
-        font: normal normal normal 16px/1 "MaterialIcons";
-        content:'\F026';
+      @include icon(after, alert-circle) {
         color: $color-accent-1;
       }
     }
@@ -159,18 +152,17 @@ form {
     background: $color-primary !important;
   }
 
-
-  [type="checkbox"]:not(:checked) + label:after,
-  [type="checkbox"]:checked + label:after {
-    font: normal normal normal 16px/1 "MaterialIcons";
-    content:'\F12C';
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 24px;
-    line-height: 1;
-    color: $color-gray;
-    transition: all .2s;
+  [type="checkbox"]:not(:checked) + label,
+  [type="checkbox"]:checked + label {
+    @include icon(after, check) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 24px;
+      line-height: 1;
+      color: $color-gray;
+      transition: all .2s;
+    }
   }
 
   [type="checkbox"]:not(:checked) + label:after {

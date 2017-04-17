@@ -84,6 +84,7 @@
 @import "settings/settings.global";
 @import "settings/settings.colors";
 @import "settings/settings.elevation";
+@import "settings/settings.icons";
 
 
 
@@ -95,9 +96,10 @@
 @import "tools/tools.clearfix";
 @import "tools/tools.hidden";
 @import "tools/tools.mq";
-@import "tools/tools.font-awesome";
+// @import "tools/tools.font-awesome";
 @import "tools/tools.material-icons";
 @import "tools/tools.gradients";
+@import "tools/tools.icons";
 
 
 

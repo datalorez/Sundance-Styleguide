@@ -1,11 +1,9 @@
 .c-dropdown__button {
-  &:after {
-    position:absolute;
-    top: $inuit-global-spacing-unit/2;
-    right: $inuit-global-spacing-unit/2;
-    font: normal normal normal 16px/1 "FontAwesome";
-    content: '\f0d7';
-    padding: $inuit-global-spacing-unit-tiny/2;
+  @include icon(after, menu-down) {
+    position: absolute;
+    font-size: 24px;
+    top: $inuit-global-spacing-unit-tiny/2;
+    right: $inuit-global-spacing-unit-tiny/2;
   }
   > a:hover {
     background-color: inherit;

@@ -22,32 +22,33 @@ body.modal-open {
 }
 
 .o-modal__close {
-  color: #000;
-  position: absolute;
-  right: $inuit-global-spacing-unit/2;
-  top: $inuit-global-spacing-unit/2;
-  z-index: 1;
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-  cursor: pointer;
-  &:hover { color: #333; }
-	.o-modal--full & {
-		@include mq($from: desktop) {
-			right: $inuit-global-spacing-unit;
-			top: $inuit-global-spacing-unit;
-			font-size: 40px;
-	  }
-	}
-	.o-modal--photo & {
-		@include mq($until: tablet) {
-			color: $color-black-disabled;
-			&:hover {
-				color: darken($color-black-disabled, 20%);
+	position: absolute;
+	right: $inuit-global-spacing-unit/2;
+	top: $inuit-global-spacing-unit/2;
+	z-index: 1;
+	@include icon(before, close) {
+		font-size: 32px;
+	  font-weight: bold;
+		color: $color-black;
+	  text-align: center;
+	  cursor: pointer;
+	  &:hover { color: #333; }
+		.o-modal--full & {
+			@include mq($from: desktop) {
+				right: $inuit-global-spacing-unit;
+				top: $inuit-global-spacing-unit;
+				font-size: 48px;
+		  }
+		}
+		.o-modal--photo & {
+			@include mq($until: tablet) {
+				color: $color-black-disabled;
+				&:hover {
+					color: darken($color-black-disabled, 20%);
+				}
 			}
 		}
 	}
-
 }
 
 .o-modal {
