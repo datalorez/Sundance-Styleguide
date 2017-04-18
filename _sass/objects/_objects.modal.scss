@@ -1,4 +1,4 @@
-body.modal-open {
+html.modal-open, body.modal-open {
 	overflow: hidden;
 	// position: fixed;
 }
@@ -18,15 +18,15 @@ body.modal-open {
   opacity: 0;
   visibility: hidden;
   cursor: pointer;
-  transition: $global-transition;
+  // transition: $global-transition;
 }
 
 .o-modal__close {
-	position: absolute;
+	position: fixed;
 	right: $inuit-global-spacing-unit/2;
 	top: $inuit-global-spacing-unit/2;
 	z-index: 1;
-	@include icon(before, close) {
+	@include icon(after, close) {
 		font-size: 32px;
 	  font-weight: bold;
 		color: $color-black;
@@ -93,7 +93,7 @@ body.modal-open {
 	top: 0;
 	bottom: 0;
 	right: 0;
-	transition: $global-transition;
+	// transition: $global-transition;
 }
 
 .o-modal--input {

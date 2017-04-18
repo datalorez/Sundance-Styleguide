@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 
 
-  // Toggles dropdown menus, closes when you click outside. 
+  // Toggles dropdown menus, closes when you click outside.
   $('html').click(function() {
     $('.c-dropdown').removeClass("c-dropdown--active");
   });
@@ -30,7 +30,7 @@ $( document ).ready(function() {
   $('.o-modal__toggle').click(function() {
     labelID = $(this).attr('for');
     $('#' + labelID).toggleClass('active');
-    $('body').toggleClass('modal-open');
+    $('body, html').toggleClass('modal-open');
   });
 
   // closes all modals when user hits esc key

@@ -36,7 +36,7 @@
 .c-page-menu__item {
   margin-bottom: $inuit-global-spacing-unit;
   box-shadow: $drop-shadow-1;
-  > a, label {
+  > a, > label {
     display: block;
     padding: $inuit-global-spacing-unit-small;
     background-color: $color-gray-light;
