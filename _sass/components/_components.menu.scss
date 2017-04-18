@@ -1,9 +1,10 @@
-.c-page-menu {
+.c-sidebar-menu {
   margin: 0;
   width: 100%;
+  box-shadow: $drop-shadow-1;
 }
 
-.c-page-menu__item {
+.c-sidebar-menu__item {
   > a {
     padding: $inuit-global-spacing-unit/2;
     background-color: $color-primary;
@@ -20,9 +21,39 @@
   }
 }
 
-.c-page-menu__item--active {
+.c-sidebar-menu__item--active {
   > a {
     background-color: $color-black;
     color: $color-white;
   }
 }
+
+.c-page-menu {
+  margin: 0;
+  width: 100%;
+}
+
+.c-page-menu__item {
+  margin-bottom: $inuit-global-spacing-unit;
+  box-shadow: $drop-shadow-1;
+  > a, label {
+    display: block;
+    padding: $inuit-global-spacing-unit-small;
+    background-color: $color-gray-light;
+    @include icon(after, plus) {
+      position:absolute;
+      right: $inuit-global-spacing-unit-small;
+      font-size: 24px;
+    }
+  }
+}
+
+// .c-page-menu__item--active {
+//   > a, label {
+//     background-color: $color-primary;
+//     @include icon(after, close);
+//     &:hover, &:focus {
+//       background-color: $color-primary;
+//     }
+//   }
+// }

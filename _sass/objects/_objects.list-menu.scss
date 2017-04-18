@@ -8,7 +8,7 @@
   position: relative;
   cursor: pointer;
   margin-bottom: 0;
-  > a {
+  > a, label {
     padding: $inuit-global-spacing-unit/2 $inuit-global-spacing-unit*1.66666 $inuit-global-spacing-unit/2 $inuit-global-spacing-unit/2;
     white-space: nowrap;
     font-size: 14px;
@@ -25,7 +25,7 @@
 }
 
 .o-list-menu__item--selected {
-  a {
+  a, label {
     background-color: $color-gray-light;
     @include icon(after, close) {
       position:absolute;

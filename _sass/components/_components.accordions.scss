@@ -1,0 +1,40 @@
+.c-accordion__item {
+  input {
+    position: absolute;
+    top: -9999px;
+    display: none;
+  }
+  input:checked + label,
+  input:checked + label:hover {
+  	background-color: $color-primary;
+    box-shadow: $drop-shadow-2;
+    border-radius: $global-radius $global-radius 0 0;
+  }
+  input:checked + label {
+    @include icon(after, close);
+  }
+}
+
+.c-accordion__content-container {
+  background: $color-gray-light;
+  overflow: hidden;
+  height: auto;
+	max-height: 0px;
+	position: relative;
+  -webkit-transition: max-height 300ms ease-in-out;
+  -moz-transition: max-height 300ms ease-in-out;
+  -ms-transition: max-height 300ms ease-in-out;
+  -o-transition: max-height 300ms ease-in-out;
+  transition: max-height 300ms ease-in-out;
+  border-radius: 0 0 $global-radius $global-radius;
+}
+
+.c-accordion__content {
+  padding: $inuit-global-spacing-unit-small;
+}
+
+.c-accordion__item input:checked ~ .c-accordion__content-container {
+  height: auto;
+  max-height: 10em;
+  box-shadow: $drop-shadow-2;
+}
