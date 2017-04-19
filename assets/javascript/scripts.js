@@ -16,6 +16,7 @@ $( document ).ready(function() {
    $('.c-dropdown > .o-list-menu__item').click (function(e){
     e.stopPropagation();
     $(this).toggleClass("o-list-menu__item--selected")
+    
   });
 
   // Toggles nav menu
