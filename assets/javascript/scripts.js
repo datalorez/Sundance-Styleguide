@@ -6,12 +6,11 @@ $( document ).ready(function() {
     $('.c-dropdown').removeClass("c-dropdown--active");
   });
 
-  $(".o-list-menu__item").click (function(e){
-      var menu = $(this).children('.c-dropdown');
-      console.log([menu, ...menu.children()])
-      $('.c-dropdown').not([menu, ...menu.children()]).removeClass("c-dropdown--active");
+  $(".c-dropdown__button").click (function(e){
+    var menu = $(this).children('.c-dropdown');
+    $('.c-dropdown').not(menu).removeClass("c-dropdown--active");
     e.stopPropagation();
-      menu.toggleClass("c-dropdown--active");
+    menu.toggleClass("c-dropdown--active");
   });
 
    $('.c-dropdown').click (function(e){
@@ -45,6 +44,7 @@ $( document ).ready(function() {
   });
 
   // Very inefficient way of showing subnavs, let a better man write this code
+  // I think this is fine, tbh
   $('.c-nav__menu-item--styleguide, .c-nav__submenu-item--styleguide').hover(function() {
     $('.c-nav__submenu-item--styleguide').toggleClass('is-active');
   });
