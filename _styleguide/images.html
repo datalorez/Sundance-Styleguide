@@ -3,3 +3,44 @@ layout: page
 title: Images
 permalink: /styleguide/images/
 ---
+
+<div class="o-wrapper">
+  <div class="o-layout o-section o-spacer__top--large o-spacer__bottom--large">
+    <div class="o-layout__item u-2/3@desktop">
+      <h1>Images</h1>
+      <p>Images on Sundance.org should appear in two different cropping ratios, with few exceptions. When rendering in a series, as an index, they should conform to a 3 column layout on desktop, 2 columns on tablet, single column on mobile.</p>
+    </div>
+  </div>
+  <div class="o-layout o-section o-spacer__bottom--large">
+    <div class="o-layout__item u-2/3@desktop">
+      <h3>16:9</h3>
+      <p>This ratio should be applied to nearly all images.</p>
+<pre><code class="language-html">
+&lt;div class=&quot;o-crop o-crop--16:9&quot;&gt;
+  &lt;img class=&quot;o-crop__content o-crop__content--center&quot; src=&quot;http://sundance.org/image.jpg&quot;&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+    <div class="o-layout__item u-1/3@desktop">
+      <div class="o-crop o-crop--16:9">
+        <img class="o-crop__content o-crop__content--center" src="https://www.sundance.org/comfy/cms/files/files/000/009/228/web_optimized/Gigi.jpg">
+      </div>
+    </div>
+  </div>
+  <div class="o-layout o-section o-spacer__bottom--large">
+    <div class="o-layout__item u-2/3@desktop">
+      <h3>1:1</h3>
+      <p>This ratio is used sparingly in several places: Merch Store Cards and Embedded Photo Galleries</p>
+<pre><code class="language-html">
+&lt;div class=&quot;o-crop o-crop--1:1&quot;&gt;
+  &lt;img class=&quot;o-crop__content o-crop__content--center&quot; src=&quot;http://sundance.org/image.jpg&quot;&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+    <div class="o-layout__item u-1/3@desktop">
+      <div class="o-crop o-crop--1:1">
+        <img class="o-crop__content o-crop__content--center" src="https://www.sundance.org/comfy/cms/files/files/000/009/228/web_optimized/Gigi.jpg">
+      </div>
+    </div>
+  </div>
+</div>

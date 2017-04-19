@@ -49,7 +49,8 @@ $inuit-crops: (
       max-width:120%;
     }
     .o-crop--1\:1 & {
-      max-width: 120%; /* [2] */
+      max-width: none; /* [2] */
+      max-height: 100%;
     }
     .o-crop--contain & {
       max-width: 100%;
