@@ -7,14 +7,15 @@ $( document ).ready(function() {
   });
 
   $(".c-dropdown__button").click (function(e){
-    var menu = $(this).children('.c-dropdown');
-    $('.c-dropdown').not(menu).removeClass("c-dropdown--active");
+    var menu = $(this).children(".c-dropdown");
+    $(".c-dropdown").not(menu).removeClass("c-dropdown--active");
     e.stopPropagation();
     menu.toggleClass("c-dropdown--active");
   });
 
-   $('.c-dropdown').click (function(e){
+   $('.c-dropdown > .o-list-menu__item').click (function(e){
     e.stopPropagation();
+    $(this).toggleClass("o-list-menu__item--selected")
   });
 
   // Toggles nav menu
