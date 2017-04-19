@@ -7,6 +7,8 @@ $( document ).ready(function() {
   });
 
   $(".o-list-menu__item").click (function(e){
+    // remove the dropdown class to prevent it from getting activated in multiple places
+    $('.c-dropdown').removeClass("c-dropdown--active");
     e.stopPropagation();
     $(this).children('.c-dropdown').toggleClass("c-dropdown--active");
   });
