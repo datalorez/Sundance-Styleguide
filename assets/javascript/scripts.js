@@ -6,13 +6,17 @@ $( document ).ready(function() {
     $('.c-dropdown').removeClass("c-dropdown--active");
   });
 
-  $(".o-list-menu__item").click (function(e){
+  $(".c-dropdown__button").click (function(e){
+    var menu = $(this).children(".c-dropdown");
+    $(".c-dropdown").not(menu).removeClass("c-dropdown--active");
     e.stopPropagation();
-    $(this).children('.c-dropdown').toggleClass("c-dropdown--active");
+    menu.toggleClass("c-dropdown--active");
   });
 
-   $('.c-dropdown').click (function(e){
+   $('.c-dropdown > .o-list-menu__item').click (function(e){
     e.stopPropagation();
+    $(this).toggleClass("o-list-menu__item--selected")
+    
   });
 
   // Toggles nav menu
@@ -35,13 +39,14 @@ $( document ).ready(function() {
 
   // closes all modals when user hits esc key
   $(document).keydown(function(e){
-    if(e.keyCode == 27) {
+    if(e.keyCode === 27) {
       $('body').removeClass('modal-open');
       $('.o-modal--input.active').removeClass('active')
     }
   });
 
   // Very inefficient way of showing subnavs, let a better man write this code
+  // I think this is fine, tbh
   $('.c-nav__menu-item--styleguide, .c-nav__submenu-item--styleguide').hover(function() {
     $('.c-nav__submenu-item--styleguide').toggleClass('is-active');
   });
