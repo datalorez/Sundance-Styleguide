@@ -32,3 +32,14 @@
 
   }
 }
+
+.c-photo__filters--desktop {
+  @include mq($until: tablet) {
+    display:none;
+  }
+}
+.c-photo__filters--mobile {
+  @include mq($from: tablet) {
+    display:none;
+  }
+}

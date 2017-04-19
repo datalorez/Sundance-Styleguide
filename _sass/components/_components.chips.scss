@@ -5,7 +5,7 @@
   margin: 0 $inuit-global-spacing-unit-tiny $inuit-global-spacing-unit-tiny 0;
   cursor: pointer;
   padding: $inuit-global-spacing-unit-tiny/2 $inuit-global-spacing-unit-tiny;
-  transition: $global-transition;
+  transition: box-shadow 300ms ease-in-out;
   border-radius: $global-radius;
   text-transform: lowercase;
   font-size: 14px;

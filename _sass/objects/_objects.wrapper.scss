@@ -16,7 +16,7 @@ $inuit-wrapper-width: 1088px !default;
 
 .o-wrapper {
   @include inuit-clearfix();
-  overflow: auto;
+  // overflow: auto;
   padding-right: $inuit-global-spacing-unit;
   padding-left:  $inuit-global-spacing-unit;
   margin-right: auto;

@@ -17,6 +17,8 @@
   border: solid 1px $color-black-disabled;
   border-radius: $global-radius;
   box-shadow: $drop-shadow-3;
+  max-height: 380px;
+  overflow: auto;
   .o-list-menu__item {
     &:first-child {
       margin-top: $inuit-global-spacing-unit-tiny;
