@@ -7,9 +7,11 @@ $( document ).ready(function() {
   });
 
   $(".o-list-menu__item").click (function(e){
+      var menu = $(this).children('.c-dropdown');
+      console.log([menu, ...menu.children()])
+      $('.c-dropdown').not([menu, ...menu.children()]).removeClass("c-dropdown--active");
     e.stopPropagation();
-      $('.c-dropdown').not(this).removeClass("c-dropdown--active");
-      $(this).children('.c-dropdown').toggleClass("c-dropdown--active");
+      menu.toggleClass("c-dropdown--active");
   });
 
    $('.c-dropdown').click (function(e){
@@ -36,7 +38,7 @@ $( document ).ready(function() {
 
   // closes all modals when user hits esc key
   $(document).keydown(function(e){
-    if(e.keyCode == 27) {
+    if(e.keyCode === 27) {
       $('body').removeClass('modal-open');
       $('.o-modal--input.active').removeClass('active')
     }
