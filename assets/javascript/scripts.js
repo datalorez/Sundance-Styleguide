@@ -82,10 +82,12 @@ $(document).ready(function () {
     // switch context between tabs on click
     tabItem.click(function (e) {
 
-        $(".c-tab__item").not(this).removeClass("c-tab__item--active");
-        e.stopPropagation();
         var tab = $(this);
+        e.stopPropagation();
+        $(".c-tab__item").not(this).removeClass("c-tab__item--active");
         tab.toggleClass("c-tab__item--active");
+
+        // hide old content and show new content
         $(".o-tab__item--active").removeClass("o-tab__item--active");
         $("#" + tab.attr('data-id')).addClass("o-tab__item--active");
     });
