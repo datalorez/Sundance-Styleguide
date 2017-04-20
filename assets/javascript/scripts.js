@@ -59,9 +59,9 @@ $( document ).ready(function() {
     $('.c-nav__submenu-item--samples').toggleClass('is-active');
   });
 
-
+var tabItem = $(".c-tab__item");
   // adjusts font size of c-tabs based on character c-background__light-gray
-  $( ".c-tab__item" ).each(function( index ) {
+  tabItem.each(function( index ) {
 
     var textLength = $(this).html().length;
     var text =$(this).html();
@@ -79,6 +79,15 @@ $( document ).ready(function() {
         }
   });
 
+  // switch context between tabs on click
+    tabItem.click(function(e) {
+
+        $(".c-tab__item").not(this).removeClass("c-tab__item--active");
+        e.stopPropagation();
+        $(this).toggleClass("c-tab__item--active");
+
+    });
+
   // checks to see if c-tabs has overflow, shows arrows until mobile
   $(window).on("resize", function () {
     var tabContainer = $('.c-tab');
@@ -92,7 +101,6 @@ $( document ).ready(function() {
             _hasScrollBar = true;
         }
         return _hasScrollBar;
-        console.log('_hasScrollBar');
     }
 
   }).resize();
