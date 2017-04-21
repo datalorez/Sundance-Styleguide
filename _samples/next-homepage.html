@@ -1,0 +1,62 @@
+---
+layout: next-page
+title: Next Fest Homepage
+---
+
+
+<div class="o-wrapper__full-width o-spacer__bottom--large o-height--hero o-center--vertical c-next__hero">
+  <video playsinline autoplay muted loop class="c-next__hero-video">
+    <source src="https://dotorg-prd-assets.s3.amazonaws.com/images/misc/nf-test.mp4" type="video/mp4">
+  </video>
+  <div style="width: 100%;" class="o-wrapper">
+    <div class="o-layout o-section">
+      <div class="c-next__hero-content o-layout__item o-layout--center u-1/1">
+        <img class="c-next__hero-logo" src="{{ "assets/images/nf-logo__vertical--white.png" | relative_url }}" alt="Sundance NEXT FEST 17">
+        <h2 class="c-next__hero-text o-color--white">Where movies, music and mischief collide.</h2>
+        <a class="button c-btn c-btn--primary" href="#">Buy Tickets</a>
+        <a class="button c-btn c-btn--primary" href="#">View Lineup</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="o-wrapper">
+  <div class="o-layout o-layout--center o-section">
+    <div class="c-next__bill o-layout__item o-spacer__bottom--large u-1/2@desktop u-1/2@tablet u-1/1@mobile">
+      <span>Movies</span>
+      <h2><a href="#">Lovesong</a></h2>
+      <h2><a href="#">Morris From America</a></h2>
+      <h2><a href="#">White Girl</a></h2>
+      <h2><a href="#">Goal</a></h2>
+      <h2><a href="#">Under the Shadow</a></h2>
+      <h2><a href="#">the Greasly Strangler</a></h2>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+$( document ).ready(function() {
+  /* Sections to match viewport height to 70% */
+  $('.o-height--hero').css('height', window.innerHeight*.80+'px');
+  $(window).resize(function() {
+    $('.o-height--hero').css('height', window.innerHeight*.80+'px');
+  });
+});
+
+$(function() {
+    var header = $(".c-next__nav");
+    header.removeClass('c-next__nav--default');
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 10) {
+            header.addClass('c-next__nav--default');
+        } else {
+            header.removeClass('c-next__nav--default');
+        }
+    });
+});
+
+</script>
