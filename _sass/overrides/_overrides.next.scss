@@ -1,0 +1,188 @@
+$color-nf-pink: #EB0093;
+$color-nf-yellow: #FCE300;
+$color-nf-red: #FA4616;
+$color-nf-green: #6DCDB8;
+$color-nf-gray: #7F7F7F;
+
+.t-next__body {
+
+  // Elements
+
+  h1 {
+    color: $color-nf-red;
+  }
+
+  // Objects
+  .o-center--vertical {
+    position: relative;
+    > div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  // components
+  .c-next__nav {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    // background: rgba(0,0,0,0.1);
+  }
+  .c-next__nav--default {
+
+    background-color:#EB0093;
+    filter:progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#EB0093, endColorstr=#FA4616);
+    background-image:-moz-linear-gradient(left, $color-nf-pink 0%, $color-nf-red 60%,$color-nf-yellow 103%);
+    background-image:linear-gradient(left, $color-nf-pink 0%, $color-nf-red 60%,$color-nf-yellow 103%);
+    background-image:-webkit-linear-gradient(left, $color-nf-pink 0%, $color-nf-red 60%,$color-nf-yellow 103%);
+    background-image:-o-linear-gradient(left, $color-nf-pink 0%, $color-nf-red 60%,$color-nf-yellow 103%);
+    background-image:-ms-linear-gradient(left, $color-nf-pink 0%, $color-nf-red 60%,$color-nf-yellow 103%);
+    background-image:-webkit-gradient(linear, left bottom, right bottom, color-stop(0%,$color-nf-pink), color-stop(60%,$color-nf-red),color-stop(103%,$color-nf-yellow));
+    box-shadow: $drop-shadow-2;
+  }
+  .c-next__nav-logo {
+    display: block;
+    width: 130px;
+    margin: $inuit-global-spacing-unit-small $inuit-global-spacing-unit;
+    > img {
+      width: 130px;
+    }
+  }
+  .c-next_nav-items-container {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .c-next_nav-items {
+    display: inline-block;
+    font-family: $heading-font-family;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    li {
+      margin-right: $inuit-global-spacing-unit-large;
+      margin-bottom: 0;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .c-next_nav-social-container {
+    position: absolute;
+    top: 50%;
+    right: $inuit-global-spacing-unit;
+    transform: translate(0, -50%);
+    margin-bottom: 0;
+    .c-next_nav-social {
+      margin-bottom: 0;
+      font-size: 24px;
+    }
+    li {
+      margin-right: $inuit-global-spacing-unit/2;
+      margin-bottom: 0;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+
+  .c-next__hero {
+    overflow: hidden;
+    background: url('/assets/images/nf-placeholder.jpg') no-repeat;
+    background-size: cover;
+    // @include mq($until: tablet) {
+    //   background: none;
+    // }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &:before {
+      content: '';
+    	position: absolute;
+    	top: 0;
+    	right: 0;
+    	bottom: 0;
+    	left: 0;
+    	background-image: linear-gradient(to bottom right,$color-nf-pink,$color-nf-yellow);
+    	opacity: .6;
+    }
+  }
+  .c-next__hero-video {}
+  video.c-next__hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    @include mq($until: tablet) {
+      display: none;
+    }
+
+  }
+  .c-next__hero-content {
+    .c-btn {
+      background-color: white;
+      color: $color-gray;
+      @include mq($until: tablet) {
+        font-size: 0.875em;
+        line-height: 16px;
+        padding: ($inuit-global-spacing-unit-small*.25) $inuit-global-spacing-unit/2;
+      }
+    }
+  }
+
+  .c-btn--next {
+    background-color: $color-nf-red;
+    color: $color-white;
+  }
+
+  .c-next__hero-logo {
+    max-width: 160px;
+    margin-bottom: $inuit-global-spacing-unit;
+    @include mq($from: tablet) {
+      max-width: 200px;
+    }
+  }
+  .c-next__hero-text {
+    margin-bottom: $inuit-global-spacing-unit-huge;
+    @include mq($until: tablet) {
+      margin-bottom: $inuit-global-spacing-unit;
+    }
+  }
+  .c-next__bill {
+    text-align: center;
+    span, h2 {
+      // text-align: center;
+    }
+    span {
+      display:block;
+    }
+    h2 {
+      display: inline-block;
+      &:after {
+        content: '•';
+        margin: 0 $inuit-global-spacing-unit-tiny;
+        color: $color-gray;
+      }
+      &:last-child {
+        &:after {
+          content: '';
+          margin: 0;
+        }
+      }
+    }
+  }
+}

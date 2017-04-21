@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body class="t-next__body">
+    <div class="o-content">
+      <div class="o-content__inner">
+        {% include next-header.html %}
+
+        {{ content }}
+
+        {% include footer.html %}
+      </div>
+
+
+    </div>
+    {% include nav.html %}
+
+  </body>
+
+</html>
