@@ -1,0 +1,19 @@
+{
+  "name": "sundance-styleguide",
+  "version": "1.0.0",
+  "description": "The Styleguide for Sundance.org",
+  "main": "index.js",
+  "scripts": {
+    "start":"bundle exec jekyll serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kirbyyardley/Sundance-Styleguide.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kirbyyardley/Sundance-Styleguide/issues"
+  },
+  "homepage": "https://github.com/kirbyyardley/Sundance-Styleguide#readme"
+}

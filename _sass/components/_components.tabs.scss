@@ -68,3 +68,11 @@ $tab-width-mobile: 133px;
     max-width: 166px;
   }
 }
+
+.c-tab__content {
+  display:none;
+}
+
+.c-tab__content--active{
+  display: inherit;
+}

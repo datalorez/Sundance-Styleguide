@@ -88,8 +88,8 @@ $(document).ready(function () {
         tab.toggleClass("c-tab__item--active");
 
         // hide old content and show new content
-        $(".o-tab__item--active").removeClass("o-tab__item--active");
-        $("#" + tab.attr('data-id')).addClass("o-tab__item--active");
+        $(".c-tab__content--active").removeClass("c-tab__content--active");
+        $("#" + tab.attr('data-id')).addClass("c-tab__content--active");
     });
 
     // checks to see if c-tabs has overflow, shows arrows until mobile
@@ -108,4 +108,8 @@ $(document).ready(function () {
         }
 
     }).resize();
+
+
+    // only populate buying/viewing options that exist
+
 });
