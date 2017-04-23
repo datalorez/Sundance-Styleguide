@@ -20,7 +20,7 @@ $(document).ready(function () {
     });
 
     // Toggles nav menu
-    $('.c-nav__icon').on('click', function () {
+    $('.c-nav__icon').click(function () {
         if ($('.o-content__inner').hasClass('is-open')) {
             $('.c-nav__icon').removeClass('is-active');
             $('.o-content__inner').removeClass('is-open');
@@ -111,5 +111,96 @@ $(document).ready(function () {
 
 
     // only populate buying/viewing options that exist
+    var watchOptions = [
+        {
+            key          : 'netflix',
+            link         : 'https://netflix.com/whatever',
+            title        : 'Netflix',
+            secondaryText: 'Add to Queue'
+        },
+        {
+            key          : 'hulu',
+            link         : 'https://hulu.com/whatever',
+            title        : 'Hulu',
+            secondaryText: 'Stream Now'
+        },
+        {
+            key          : 'vudu',
+            link         : 'https://vudu.com/whatever',
+            title        : 'VUDU',
+            secondaryText: 'Rent or Buy'
+        },
+        {
+            key          : 'amazon',
+            link         : 'https://amazon.com/whatever',
+            title        : 'Amazon',
+            secondaryText: 'Rent or Buy'
+        },
+        {
+            key          : 'hbo',
+            link         : 'https://hbo.com/whatever',
+            title        : 'HBO',
+            secondaryText: 'Stream Now'
+        },
 
+        {
+            key          : 'fandangoNow',
+            link         : 'https://fandangonow.com/whatever',
+            title        : 'FandangoNow',
+            secondaryText: 'Stream Now'
+        },
+
+        {
+            key          : 'itunes',
+            link         : 'https://itunes.com/whatever',
+            title        : 'iTunes',
+            secondaryText: 'Rent or Buy'
+        }
+    ]
+
+    var watch = $('.c-watch');
+    if (watch) {
+        for (let i = 0; i < 5 && i < watchOptions.length; i++) {
+            console.log(i)
+            var item = watchOptions[i];
+            var html =
+                    `<div class="c-watch__item o-layout__item u-1/6@desktop u-1/3@tablet u-1/2">
+                    <a href="${item.link}">
+                        <div class="c-btn c-btn--icon-only c-watch__item-icon--${item.key} c-watch__item-icon" href="#"></div>
+                        <div class="c-watch__item-text">
+                        <span class="c-watch__item-title o-color--secondary">${item.title}</span><span
+                            class="c-watch__item-desc o-text--smalltext o-color--text-primary">${item.secondaryText}</span>
+                        </div>
+                    </a>
+                </div>`;
+            watch.append(html)
+        }
+
+        if (watchOptions.length > 5) {
+            console.log('hi')
+            var html =
+                    `<div class="c-watch__item o-layout__item u-1/6@desktop u-1/3@tablet u-1/2">
+                    <ul class="o-list-menu">
+                        <li class="o-list-menu__item c-dropdown__button"><a>More Options</a>
+                            <ul class="o-list-menu c-dropdown">`;
+            for (let i = 5; i < watchOptions.length; i++) {
+                console.log(i)
+                var item = watchOptions[i];
+                html += `<li class="o-list-menu__item"><a href='${item.link}'>${item.title}</a></li>`
+            }
+
+            html += `</ul></li></ul></div>`;
+            watch.append(html)
+            $(".c-dropdown__button").click(function (e) {
+                var menu = $(this).children(".c-dropdown");
+                $(".c-dropdown").not(menu).removeClass("c-dropdown--active");
+                e.stopPropagation();
+                menu.toggleClass("c-dropdown--active");
+            });
+        }
+        watch.append(`<div class="c-watch__button-container o-layout__item u-1/1">
+                <a class="c-btn c-btn--icon c-btn--small c-btn--secondary mdi-eye" href="#">Find More Films</a>
+                <a class="c-btn c-btn--icon c-btn--small c-btn--secondary mdi-plus" href="#">Add to Favorites</a>
+            </div>`)
+    }
 });
