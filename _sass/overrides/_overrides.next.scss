@@ -12,6 +12,10 @@ $color-nf-gray: #7F7F7F;
     color: $color-nf-red;
   }
 
+  .c-next__hero-content h1 {
+    color: $color-white;
+  }
+
   // Objects
   .o-center--vertical {
     position: relative;
@@ -50,14 +54,47 @@ $color-nf-gray: #7F7F7F;
       width: 130px;
     }
   }
-  .c-next_nav-items-container {
+  .c-next__nav-items-container {
     display: inline-block;
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: auto;
+    right: 0;
+    transform: translate(0, -50%);
+    margin-right: $inuit-global-spacing-unit;
+    white-space: nowrap;
+    @include mq($from: desktop) {
+      top: 50%;
+      left: 50%;
+      right: auto;
+      transform: translate(-50%, -50%);
+      margin-right: 0;
+    }
+    @include mq($until: tablet) {
+      &.is-open {
+        display:block;
+      }
+      display:none;
+      background: $color-nf-pink;
+      top: 77px;
+      right: 0;
+      left: auto;
+      transform: translate(0,0);
+      box-shadow: $drop-shadow-2;
+      margin-right: 0;
+      ul {
+        padding: $inuit-global-spacing-unit;
+        li {
+          display:block;
+          margin-bottom: $inuit-global-spacing-unit;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
   }
-  .c-next_nav-items {
+  .c-next__nav-items {
     display: inline-block;
     font-family: $heading-font-family;
     font-size: 18px;
@@ -72,7 +109,7 @@ $color-nf-gray: #7F7F7F;
     }
   }
 
-  .c-next_nav-social-container {
+  .c-next__nav-social-container {
     position: absolute;
     top: 50%;
     right: $inuit-global-spacing-unit;
@@ -81,6 +118,7 @@ $color-nf-gray: #7F7F7F;
     .c-next_nav-social {
       margin-bottom: 0;
       font-size: 24px;
+
     }
     li {
       margin-right: $inuit-global-spacing-unit/2;
@@ -89,19 +127,40 @@ $color-nf-gray: #7F7F7F;
         margin-right: 0;
       }
     }
+    @include mq($until: desktop) {
+      display:none;
+    }
   }
-
+  .c-next__nav-icon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    margin-right: $inuit-global-spacing-unit;
+    color: $color-white;
+    font-size: 40px;
+    &:before {
+      font-family: $icon-font-family;
+      content: '\F35C';
+    }
+    @include mq($from: tablet) {
+      display:none;
+    }
+  }
 
   .c-next__hero {
     overflow: hidden;
-    background: url('/assets/images/nf-placeholder.jpg') no-repeat;
     background-size: cover;
+    background-position: center center;
     // @include mq($until: tablet) {
     //   background: none;
     // }
     &::-webkit-scrollbar {
       display: none;
     }
+  }
+
+  .c-next__hero-home {
     &:before {
       content: '';
     	position: absolute;
@@ -113,6 +172,7 @@ $color-nf-gray: #7F7F7F;
     	opacity: .6;
     }
   }
+
   .c-next__hero-video {}
   video.c-next__hero-video {
     position: absolute;
@@ -133,6 +193,7 @@ $color-nf-gray: #7F7F7F;
 
   }
   .c-next__hero-content {
+    z-index: $z-index-menu;
     .c-btn {
       background-color: white;
       color: $color-gray;
@@ -184,5 +245,26 @@ $color-nf-gray: #7F7F7F;
         }
       }
     }
+  }
+  .c-next__triangle {
+    z-index: $z-index-menu - 1;
+    position: absolute;
+  }
+  .c-next__triangle--left {
+    top: 40px;
+    right: 50px;
+    width: 728px;
+    // @include mq($from: mobile) {
+    //   top: 210px;
+    //   right: -50px;
+    //   width: 320px;
+    // }
+    // @include mq($from: tablet) {
+    //   top: 450px;
+    //   right: 10px;
+    //   width: 480px;
+    // }
+  }
+  .c-next__triangle img {
   }
 }
