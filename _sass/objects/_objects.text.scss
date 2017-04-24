@@ -1,6 +1,6 @@
 // Text Colors
 
-.o-color--white, .o-color--white > * {
+.o-color--white, .o-color--white > *, .o-color--white:focus {
   color: $color-white;
 }
 
