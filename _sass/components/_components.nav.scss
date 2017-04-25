@@ -81,6 +81,7 @@ header {
  }
 
  .c-nav__container {
+   visibility: hidden;
    position: absolute;
    width: $nav-menu-width;
    display: block;
@@ -88,6 +89,9 @@ header {
    bottom: 0;
    left: 0;
    z-index: 2;
+   &.is-open {
+     visibility: visible;
+   }
  }
 
  .c-nav {

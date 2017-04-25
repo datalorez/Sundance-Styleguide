@@ -9,27 +9,27 @@
 }
 
 .c-watch__item-icon--netflix {
-  background-image: url('/assets/images/netflix.png');
+  background-image: url('{{ "/assets/images/netflix.png" | relative_url }}');
   background-size: 140%;
 }
 
 .c-watch__item-icon--hulu {
-  background-image: url('/assets/images/hulu.png');
+  background-image: url('{{ "/assets/images/hulu.png" | relative_url }}');
   background-size: 90%;
 }
 
 .c-watch__item-icon--vudu {
-  background-image: url('/assets/images/vudu.png');
+  background-image: url('{{ "/assets/images/vudu.png" | relative_url }}');
   background-size: 80%;
 }
 
 .c-watch__item-icon--amazon {
-  background-image: url('/assets/images/amazon.png');
+  background-image: url('{{ "/assets/images/amazon.png" | relative_url }}');
   background-size: 70%;
 }
 
 .c-watch__item-icon--hbo {
   background-color: $color-white;
-  background-image: url('/assets/images/hbo.png');
+  background-image: url('{{ "/assets/images/hbo.png" | relative_url }}');
   background-size: 80%;
 }
