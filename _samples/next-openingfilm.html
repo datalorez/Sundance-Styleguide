@@ -6,7 +6,12 @@ title: Next Fest Opening Film
   <img src="{{ "assets/images/nf-placeholder-2.png" | relative_url }}" alt="">
 </div>
 
-<div style="margin-top: 77px;background-image: url('{{ "assets/images/nf-placeholder-1.jpg" | relative_url }}');" class="o-wrapper__full-width o-spacer__bottom--large o-height--section o-center--vertical c-next__hero">
+<div style="margin-top: 77px;background-image: url('{{ "assets/images/nf-placeholder-1.jpg" | relative_url }}'); background-position: top center;" class="o-wrapper__full-width o-spacer__bottom--large o-height--section o-center--vertical c-next__hero c-next__hero-video">
+  <video playsinline autoplay muted loop class="c-next__hero-video">
+    <source src="https://dotorg-prd-assets.s3.amazonaws.com/images/misc/nf-test.mp4" type="video/mp4">
+  </video>
+  <div class="c-next__hero-overlay">
+  </div>
   <div style="width: 100%;" class="o-wrapper">
     <div class="o-layout o-section">
       <div class="c-next__hero-content o-layout__item u-2/3">
@@ -56,20 +61,19 @@ title: Next Fest Opening Film
 
 
 
-        <input id="modal-small" class="o-modal--input" type="checkbox">
-        <label class="c-btn c-btn--primary o-modal__toggle" for="modal-small"><img class="o-crop__content" src="{{ "/assets/images/nf-placeholder-2.jpg" | relative_url }}" alt=""></label>
-        
-        <label class="o-modal__overlay o-overlay--black o-modal__toggle" for="modal-small"></label>
+        <input id="modal-video" class="o-modal--input" type="checkbox">
+        <label class="c-btn c-btn--primary o-modal__toggle" for="modal-video"><img class="o-crop__content" src="{{ "/assets/images/nf-placeholder-2.jpg" | relative_url }}" alt=""></label>
+
+        <label class="o-modal__overlay o-overlay--black o-modal__toggle" for="modal-video"></label>
         <div class="o-modal__container">
-          <div class="o-modal">
-            <label class="o-modal__close o-modal__toggle" for="modal-small">&nbsp;</label>
+          <div class="o-modal o-modal--video">
+            <label class="o-modal__close o-modal__toggle" for="modal-video">&nbsp;</label>
             <div class="o-wrapper__modal">
-              <div class="o-layout">
-                <div class="o-layout__item u-1/1">
+              <div class="o-media__video-container">
+                <iframe class="o-media__video" data-video_id="U8pXf9idEQY" data-video_type="youtube" id="" frameborder="0" allowfullscreen="1" title="YouTube video player" src="https://www.youtube.com/embed/U8pXf9idEQY?controls=1&amp;showinfo=0&amp;modestbranding=1&amp;iv_load_policy=3&amp;origin=https%3A%2F%2Fdotorg-cms-staging-green.cfapps.io&amp;rel=0&amp;playsinline=0&amp;theme=dark&amp;enablejsapi=1"></iframe>
+                <script>
 
-                  <iframe class="video" data-video_id="U8pXf9idEQY" data-video_type="youtube" id="" frameborder="0" allowfullscreen="1" title="YouTube video player" src="https://www.youtube.com/embed/U8pXf9idEQY?controls=1&amp;showinfo=0&amp;modestbranding=1&amp;iv_load_policy=3&amp;origin=https%3A%2F%2Fdotorg-cms-staging-green.cfapps.io&amp;rel=0&amp;playsinline=0&amp;theme=dark&amp;enablejsapi=1"></iframe>
-
-                </div>
+                </script>
               </div>
             </div>
           </div>

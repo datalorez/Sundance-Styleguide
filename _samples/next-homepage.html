@@ -4,7 +4,7 @@ title: Next Fest Homepage
 ---
 
 
-<div style="background-image: url('{{ "/assets/images/nf-placeholder.jpg" | relative_url }}');" class="o-wrapper__full-width o-spacer__bottom--large o-height--hero o-center--vertical c-next__hero c-next__hero-home">
+<div style="background-image: url('{{ "/assets/images/nf-placeholder.jpg" | relative_url }}');" class="o-wrapper__full-width o-spacer__bottom--large o-height--hero o-center--vertical c-next__hero c-next__hero-video">
   <video playsinline autoplay muted loop class="c-next__hero-video">
     <source src="https://dotorg-prd-assets.s3.amazonaws.com/images/misc/nf-test.mp4" type="video/mp4">
   </video>
@@ -60,8 +60,7 @@ title: Next Fest Homepage
     </div>
   </div>
 </div>
-
-<div class="o-wrapper o-spacer__bottom--small">
+<div id="membership" class="o-wrapper o-spacer__bottom--small">
   <div class="o-layout o-layout--center o-section">
     <div class="o-layout__item o-spacer__bottom--small u-1/1">
       <h2 class="o-color--black-disabled">Exclusive Access for Sundance Members</h2>
@@ -98,6 +97,16 @@ $( document ).ready(function() {
   });
 });
 
+$( document ).ready(function() {
+  var scroll = $(window).scrollTop();
+
+  if (scroll >= 10) {
+      header.addClass('c-next__nav--default');
+  } else {
+      header.removeClass('c-next__nav--default');
+  }
+});
+
 $(function() {
     var header = $(".c-next__nav");
     header.removeClass('c-next__nav--default');
@@ -111,5 +120,7 @@ $(function() {
         }
     });
 });
+
+
 
 </script>
