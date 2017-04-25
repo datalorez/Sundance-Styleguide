@@ -49,6 +49,12 @@
     color: $color-black-disabled;
   }
 }
+.o-color--black-hover {
+  color: $color-black-hover;
+  &:hover {
+    color: $color-black-hover;
+  }
+}
 
 // Special Text Sizes
 
