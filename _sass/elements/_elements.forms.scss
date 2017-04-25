@@ -52,6 +52,25 @@ input[type="text"]:disabled {
   background-color: lighten($color-black, 90%);
 }
 
+input[type="search"] {
+  padding: 11px $inuit-global-spacing-unit-tiny 11px $inuit-global-spacing-unit+$inuit-global-spacing-unit-tiny ;
+  & + label {
+    color: $color-black-disabled;
+    position:absolute;
+    pointer-events:none;
+    left:$inuit-global-spacing-unit-tiny;
+    top:11px;
+  }
+  &:focus + label {
+    color: rgba(0,0,0,0);
+  }
+  &:valid:not(:focus):not(:placeholder-shown) {
+    & + label {
+      color: rgba(0,0,0,0)
+    }
+  }
+}
+
 input[type="text"],
 input[type="email"],
 input[type="password"],
