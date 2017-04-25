@@ -48,6 +48,9 @@ $inuit-wrapper-width: 1088px !default;
   margin-right: auto;
   margin-left:  auto;
   max-width: 900px;
+  .o-modal--video & {
+    padding: 0;
+  }
   @include mq($until: desktop) {
     padding: $inuit-global-spacing-unit-large;
     max-width: 420px;

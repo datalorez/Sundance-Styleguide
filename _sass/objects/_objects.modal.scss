@@ -40,6 +40,9 @@ html.modal-open, body.modal-open {
 				font-size: 48px;
 		  }
 		}
+		.o-modal--video & {
+      color: $color-white;
+    }
 		.o-modal--photo & {
 			@include mq($until: tablet) {
 				color: $color-black-disabled;
