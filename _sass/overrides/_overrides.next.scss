@@ -32,10 +32,9 @@ $color-nf-gray: #7F7F7F;
     position: fixed;
     width: 100%;
     z-index: $z-index-menu;
-    // background: rgba(0,0,0,0.1);
+    background-image: transparent;
   }
   .c-next__nav--default {
-
     background-color:#EB0093;
     filter:progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#EB0093, endColorstr=#FA4616);
     background-image:-moz-linear-gradient(left, $color-nf-pink 0%, $color-nf-red 60%,$color-nf-yellow 103%);
@@ -171,15 +170,15 @@ $color-nf-gray: #7F7F7F;
   }
 
   .c-next__hero-home {
-    &:before {
+    .c-next__hero-overlay {
       content: '';
-    	position: absolute;
-    	top: 0;
-    	right: 0;
-    	bottom: 0;
-    	left: 0;
-    	background-image: linear-gradient(to bottom right,$color-nf-pink,$color-nf-yellow);
-    	opacity: .6;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(to bottom right,$color-nf-pink,$color-nf-yellow);
+      opacity: .6;
     }
   }
 
@@ -192,7 +191,7 @@ $color-nf-gray: #7F7F7F;
     min-height: 100%;
     width: auto;
     height: auto;
-    z-index: -1;
+    // z-index: -1;
     -ms-transform: translateX(-50%) translateY(-50%);
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
