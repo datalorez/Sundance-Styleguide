@@ -2,8 +2,12 @@
   cursor: pointer;
   h3 {
     margin-bottom: 0;
+    color: $color-text-heading;
   }
-  label {
+  p {
+    color: $color-text-primary;
+  }
+  span {
     color: $color-secondary;
     a:hover {
       color: $color-secondary-hover;

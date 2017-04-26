@@ -8,10 +8,3 @@ a {
 a {
   text-decoration: none;
 }
-
-a h3, a p {
-  color: $color-text-primary;
-  &:hover, &:focus {
-    color: $color-black-hover;
-  }
-}
