@@ -9,21 +9,73 @@
     left: 0;
     margin: 24px;
   }
+  span {
+    display:block;
+    margin-bottom: $inuit-global-spacing-unit-tiny;
+  }
   h3 {
     margin-bottom: 0;
+  }
+  &:hover {
+    .o-overlay {
+      filter:progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=$color-primary, endColorstr=$color-black);
+      background:-moz-linear-gradient(top, $color-primary 0%, $color-black 90%);
+      background:linear-gradient(top, $color-primary 0%, $color-black 90%);
+      background:-webkit-linear-gradient(top, $color-primary 0%, $color-black 90%);
+      background:-o-linear-gradient(top, $color-primary 0%, $color-black 90%);
+      background:-ms-linear-gradient(top, $color-primary 0%, $color-black 90%);
+      // background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,$color-primary),color-stop(80%,$color-black);
+      background:linear-gradient(top, $color-primary 0%, $color-black 90%);
+      opacity: .38;
+    }
   }
 }
 
 .c-featured__item--small {
   h3 {
-    @include mq($from: desktop) {
-      @include inuit-font-size(18px, 1.222222222);
+    @include inuit-font-size(18px, 1.222222222);
+  }
+}
+
+.c-featured__item--video {
+  span {
+    margin-left: $inuit-global-spacing-unit+$inuit-global-spacing-unit-tiny;
+  }
+  .c-featured__item-text-wrapper {
+    @include icon(before, play) {
+      position: absolute;
+      top: -$inuit-global-spacing-unit-tiny;
+      color: $color-primary;
+      font-size: 24px;
+      margin-right: $inuit-global-spacing-unit-tiny;
     }
-    @include mq($until: tablet) {
-      @include inuit-font-size($inuit-font-size-h3, 1.2307692308);
+  }
+}
+.c-featured__item--instagram {
+  span {
+    margin-left: $inuit-global-spacing-unit+$inuit-global-spacing-unit-tiny;
+  }
+  .c-featured__item-text-wrapper {
+    @include icon(before, instagram) {
+      position: absolute;
+      top: -$inuit-global-spacing-unit-tiny;
+      color: $color-primary;
+      font-size: 24px;
+      margin-right: $inuit-global-spacing-unit-tiny;
     }
-    @include mq($until: mobile) {
-      @include inuit-font-size(18px, 1.222222222);
+  }
+}
+.c-featured__item--archive {
+  span {
+    margin-left: $inuit-global-spacing-unit+$inuit-global-spacing-unit-tiny;
+  }
+  .c-featured__item-text-wrapper {
+    @include icon(before, archive) {
+      position: absolute;
+      top: -$inuit-global-spacing-unit-tiny;
+      color: $color-primary;
+      font-size: 24px;
+      margin-right: $inuit-global-spacing-unit-tiny;
     }
   }
 }
