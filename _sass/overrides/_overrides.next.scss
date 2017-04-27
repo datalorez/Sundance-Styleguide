@@ -204,8 +204,8 @@ $color-nf-gray: #7F7F7F;
     }
 
   }
-  .c-next__hero-content {
-    z-index: $z-index-menu;
+  .c-next__hero {
+    // z-index: $z-index-menu;
     .c-btn {
       background-color: white;
       color: $color-gray;
@@ -216,7 +216,9 @@ $color-nf-gray: #7F7F7F;
       }
     }
   }
-
+  .c-next__project-buttons {
+    margin: $inuit-global-spacing-unit 0;
+  }
   .c-btn--next {
     background-color: $color-nf-red;
     color: $color-white;
