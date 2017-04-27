@@ -36,14 +36,14 @@ h2 {
   @include inuit-font-size($inuit-font-size-h2, 1.1428571429);
   font-weight: normal;
   @include mq($until: mobile) {
-    @include inuit-font-size(18px, 1.222222222);
+    @include inuit-font-size(20px, 1.222222222);
   }
 }
 
 h3 {
   @include inuit-font-size($inuit-font-size-h3, 1.2307692308);
   @include mq($until: mobile) {
-    @include inuit-font-size(18px, 1.222222222);
+    @include inuit-font-size(20px, 1.222222222);
   }
 }
 

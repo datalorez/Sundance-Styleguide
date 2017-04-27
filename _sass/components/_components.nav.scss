@@ -12,7 +12,7 @@ header {
   height: 77px;
   display:block;
   background-color: $color-white;
-  border-bottom: solid 2px $color-black;
+  // border-bottom: solid 2px $color-black;
   box-shadow: $drop-shadow-2;
   z-index: $z-index-nav;
 }
@@ -20,7 +20,7 @@ header {
   position: relative;
   display: block;
   overflow: hidden;
-  padding-bottom: 75px;
+  padding-bottom: 77px;
   min-width: 150px;
   width: 150px;
 }

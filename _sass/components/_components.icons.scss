@@ -1,0 +1,10 @@
+.c-icon__input {
+
+}
+.c-icon__input--search {
+  @include icon(before, magnify) {
+    color: $color-black;
+    margin-right: $inuit-global-spacing-unit-tiny;
+    
+  }
+}
