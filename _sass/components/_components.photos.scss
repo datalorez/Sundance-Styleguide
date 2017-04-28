@@ -40,6 +40,6 @@
 }
 .c-photo__filters--mobile {
   @include mq($from: tablet) {
-    display:none;
+    // display:none;
   }
 }

@@ -1,8 +1,14 @@
-$nav-menu-width: 160px;
+$nav-menu-width: 125px;
 $full-menu-width: ($nav-menu-width*2);
 
 body {
   // margin-top: 77px;
+  &.open {
+    overflow: hidden;
+  }
+  &.open > .o-content {
+    overflow: hidden;
+  }
 }
 
 header {
@@ -89,7 +95,7 @@ header {
    bottom: 0;
    left: 0;
    z-index: 2;
-   &.is-open {
+   &.open {
      visibility: visible;
    }
  }
@@ -198,11 +204,11 @@ header {
      left: 0;
  }
 
- .o-content__inner.is-open {
+ .o-content__inner.open-left {
      overflow: hidden;
  }
 
- .o-content__inner.is-open {
+ .o-content__inner.open-left {
      -webkit-transform: translateX($full-menu-width);
      -moz-transform: translateX($full-menu-width);
      -ms-transform: translateX($full-menu-width);

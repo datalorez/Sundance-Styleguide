@@ -6,7 +6,7 @@ title: Next Fest Homepage
 
 <div style="background-image: url('{{ "/assets/images/nf-placeholder.jpg" | relative_url }}');" class="o-wrapper__full-width o-spacer__bottom--large o-height--hero o-center--vertical c-next__hero c-next__hero-video">
   <video playsinline autoplay muted loop class="c-next__hero-video">
-    <source src="https://dotorg-prd-assets.s3.amazonaws.com/images/misc/nf-test.mp4" type="video/mp4">
+    <source src="{{ "/assets/images/nf-testvid.mp4" | relative_url }}" type="video/mp4">
   </video>
   <div class="c-next__hero-overlay">
 
@@ -40,22 +40,40 @@ title: Next Fest Homepage
 <div class="o-wrapper">
   <div class="o-layout o-spacer__bottom--large o-layout--center o-section">
     <div class="o-layout__item o-spacer__bottom--small u-1/6@desktop u-1/3@tablet u-1/2">
-      <img data-action="zoom" src="{{ "/assets/images/nf-placeholder-2.jpg" | relative_url }}" alt="">
+      <img data-action="zoom" src="{{ "/assets/images/nf-gallery-1.jpg" | relative_url }}" alt="">
     </div>
     <div class="o-layout__item o-spacer__bottom--small u-1/6@desktop u-1/3@tablet u-1/2">
-      <img data-action="zoom" src="{{ "/assets/images/nf-placeholder-2.jpg" | relative_url }}" alt="">
+      <img data-action="zoom" src="{{ "/assets/images/nf-gallery-2.jpg" | relative_url }}" alt="">
     </div>
     <div class="o-layout__item o-spacer__bottom--small u-1/6@desktop u-1/3@tablet u-1/2">
-      <img data-action="zoom" src="{{ "/assets/images/nf-placeholder-2.jpg" | relative_url }}" alt="">
+      <img data-action="zoom" src="{{ "/assets/images/nf-gallery-3.jpg" | relative_url }}" alt="">
     </div>
     <div class="o-layout__item o-spacer__bottom--small u-1/6@desktop u-1/3@tablet u-1/2">
-      <img data-action="zoom" src="{{ "/assets/images/nf-placeholder-2.jpg" | relative_url }}" alt="">
+      <img data-action="zoom" src="{{ "/assets/images/nf-gallery-4.jpg" | relative_url }}" alt="">
     </div>
     <div class="o-layout__item o-spacer__bottom--small u-1/6@desktop u-1/3@tablet u-1/2">
-      <img data-action="zoom" src="{{ "/assets/images/nf-placeholder-2.jpg" | relative_url }}" alt="">
+      <img data-action="zoom" src="{{ "/assets/images/nf-gallery-5.jpg" | relative_url }}" alt="">
     </div>
     <div class="o-layout__item o-spacer__bottom--small u-1/6@desktop u-1/3@tablet u-1/2">
-      <img data-action="zoom" src="{{ "/assets/images/nf-placeholder-2.jpg" | relative_url }}" alt="">
+      <img data-action="zoom" src="{{ "/assets/images/nf-gallery-6.jpg" | relative_url }}" alt="">
+    </div>
+    <div class="o-layout__item o-spacer__bottom--small u-1/6@desktop u-1/3@tablet u-1/2">
+      <img data-action="zoom" src="{{ "/assets/images/nf-gallery-7.jpg" | relative_url }}" alt="">
+    </div>
+    <div class="o-layout__item o-spacer__bottom--small u-1/6@desktop u-1/3@tablet u-1/2">
+      <img data-action="zoom" src="{{ "/assets/images/nf-gallery-8.jpg" | relative_url }}" alt="">
+    </div>
+    <div class="o-layout__item o-spacer__bottom--small u-1/6@desktop u-1/3@tablet u-1/2">
+      <img data-action="zoom" src="{{ "/assets/images/nf-gallery-9.jpg" | relative_url }}" alt="">
+    </div>
+    <div class="o-layout__item o-spacer__bottom--small u-1/6@desktop u-1/3@tablet u-1/2">
+      <img data-action="zoom" src="{{ "/assets/images/nf-gallery-10.jpg" | relative_url }}" alt="">
+    </div>
+    <div class="o-layout__item o-spacer__bottom--small u-1/6@desktop u-1/3@tablet u-1/2">
+      <img data-action="zoom" src="{{ "/assets/images/nf-gallery-11.jpg" | relative_url }}" alt="">
+    </div>
+    <div class="o-layout__item o-spacer__bottom--small u-1/6@desktop u-1/3@tablet u-1/2">
+      <img data-action="zoom" src="{{ "/assets/images/nf-gallery-1.jpg" | relative_url }}" alt="">
     </div>
   </div>
 </div>
@@ -88,6 +106,7 @@ title: Next Fest Homepage
 <script src="{{ "/assets/javascript/transition.js" | relative_url }}"></script>
 <script src="{{ "/assets/javascript/zoom.js" | relative_url }}"></script>
 <script type="text/javascript">
+
 $( document ).ready(function() {
   /* Sections to match viewport height to 70% */
   $('.o-height--hero').css('height', window.innerHeight*.80+'px');
@@ -96,30 +115,22 @@ $( document ).ready(function() {
   });
 });
 
-$( document ).ready(function() {
-  var scroll = $(window).scrollTop();
-
-  if (scroll >= 10) {
-      header.addClass('c-next__nav--default');
-  } else {
-      header.removeClass('c-next__nav--default');
-  }
-});
-
 $(function() {
     var header = $(".c-next__nav");
-    header.removeClass('c-next__nav--default');
-    $(window).scroll(function() {
-        var scroll = $(window).scrollTop();
+    var scroll = $(window).scrollTop();
+    if (scroll < 10) {
+        header.removeClass('c-next__nav--default');
+    }
 
-        if (scroll >= 10) {
-            header.addClass('c-next__nav--default');
-        } else {
-            header.removeClass('c-next__nav--default');
-        }
+    $(window).on("load resize scroll",function(){
+      var scroll = $(window).scrollTop();
+
+      if (scroll >= 10) {
+          header.addClass('c-next__nav--default');
+      } else {
+          header.removeClass('c-next__nav--default');
+      }
     });
 });
-
-
 
 </script>

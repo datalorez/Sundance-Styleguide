@@ -9,68 +9,29 @@ permalink: /modals/
     <div class="o-layout__item u-1/1">
       <h3>Modals</h3>
     </div>
-    <div class="o-layout__item u-1/3@desktop o-spacer__bottom--large">
-      <label class="c-btn c-btn--primary o-modal__toggle" for="modal-large">Launch Full Screen Modal</label>
+    <div class="o-layout__item u-1/4@desktop o-spacer__bottom--large">
+      <label class="c-btn c-btn--primary o-modal__toggle" for="modal-video">Video Modal</label>
+
+      {% include videomodal.html %}
+
+    </div>
+    <div class="o-layout__item u-1/4@desktop o-spacer__bottom--large">
+      <label class="c-btn c-btn--primary o-modal__toggle" for="modal-large">Full Screen Modal</label>
 
       {% include fullmodal.html %}
 
     </div>
 
-    <div class="o-layout__item u-1/3@desktop o-spacer__bottom--large">
-      <label class="c-btn c-btn--primary o-modal__toggle" for="modal-photo">Launch Photo Modal</label>
+    <div class="o-layout__item u-1/4@desktop o-spacer__bottom--large">
+      <label class="c-btn c-btn--primary o-modal__toggle" for="modal-photo">Photo Modal</label>
 
       {% include photomodal.html %}
 
     </div>
 
-    <div class="o-layout__item u-1/3@desktop o-spacer__bottom--large">
-
-      <input id="modal-small" class="o-modal--input" type="checkbox">
-      <label class="c-btn c-btn--primary o-modal__toggle" for="modal-small">Launch Normal Modal</label>
-      <label class="o-modal__overlay o-overlay--black o-modal__toggle" for="modal-small"></label>
-      <div class="o-modal__container">
-        <div class="o-modal">
-          <label class="o-modal__close o-modal__toggle" for="modal-small">&nbsp;</label>
-          <div class="o-wrapper__modal">
-
-            <div class="o-layout">
-              <div class="o-layout__item u-1/2@desktop u-1/1">
-                <h3>Create Account</h3>
-
-                <p>Creating a 2017 Sundance Film Festival account allows you to:</p>
-
-                <ul>
-                  <li>Purchase packages, passes and tickets</li>
-                  <li>Favorite films and events</li>
-                  <li>Create a personalized festival schedule</li>
-                </ul>
-
-                <a class="c-btn c-btn--primary" href="#">Create Account</a>
-              </div>
-              <div class="o-layout__item u-1/2@desktop u-1/1">
-                <h3 class="o-spacer__bottom--large">Log In</h3>
-
-                <div class="o-form__input-container">
-                  <input type="text" placeholder=" ">
-                  <label>Full Name</label>
-                </div>
-
-                <div class="o-form__input-container">
-                  <input type="email" placeholder=" " required>
-                  <label>Email Address</label>
-                </div>
-
-                <a class="c-btn c-btn--primary" href="#">Log In</a>
-                <p><a href="#">Forgot Password?</a><br>
-                <a href="#"> Didn't Receive Confirmation Instructions?</a></p>
-              </div>
-
-            </div>
-
-
-          </div>
-        </div>
-      </div>
+    <div class="o-layout__item u-1/4@desktop o-spacer__bottom--large">
+      <label class="c-btn c-btn--primary o-modal__toggle" for="modal-small">Normal Modal</label>
+      {% include modal.html %}
 
     </div>
   </div>

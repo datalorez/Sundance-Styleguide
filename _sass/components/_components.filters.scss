@@ -1,0 +1,141 @@
+.o-content__inner.open-right {
+    overflow: hidden;
+}
+
+.c-filters__container {
+  background: $color-white;
+  visibility: hidden;
+  position: fixed;
+  width: 100%;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: 2;
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+  transition: 0.35s;
+}
+
+.c-filters__container.open-right {
+  visibility: visible;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.c-filters__top-menu {
+  position:relative;
+  height: $inuit-global-spacing-unit-huge;
+  margin-bottom: $inuit-global-spacing-unit-tiny;
+  box-shadow: $drop-shadow-2;
+  z-index: $z-index-nav;
+}
+
+.c-filters__back {
+  position: absolute;
+  top:0;
+  left:0;
+  cursor: pointer;
+  margin: 6px;
+  @include icon(before, chevron-left) {
+    font-size: 24px;
+  }
+}
+
+.c-filters__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display:inline-block;
+  h3 {
+    margin: 0;
+  }
+}
+
+.c-filters__clear {
+  position: absolute;
+  top:0;
+  right:0;
+  cursor:pointer;
+  margin: $inuit-global-spacing-unit/2;
+}
+
+
+.c-filters__menu-container {
+  position: absolute;
+  top: $inuit-global-spacing-unit-huge;
+  bottom: $inuit-global-spacing-unit-huge+$inuit-global-spacing-unit;
+  left: 0;
+  right: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.c-filters__menu {
+  background: $color-white;
+  position: relative;
+  width: 100%;
+}
+
+.c-filters__menu--top {
+  > .c-filters__menu-item > a {
+    position: relative;
+    @include icon(after, chevron-right);
+  }
+}
+
+.c-filters__menu--sub {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+  transition: transform 0.35s;
+  z-index: 1;
+  .c-filters__menu--top > .c-filters__menu-item.open & {
+    visibility: visible;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.c-filters__menu-item {
+  position: initial;
+  margin-bottom: $inuit-global-spacing-unit-tiny;
+  &:first-child {
+    margin-top: $inuit-global-spacing-unit-tiny;
+  }
+  a {
+    line-height: 1;
+    &:after {
+      position:absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      font-size: 16px;
+      margin-right: $inuit-global-spacing-unit/2;
+    }
+  }
+}
+
+.c-filters__button-container {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: $inuit-global-spacing-unit/2;
+}
