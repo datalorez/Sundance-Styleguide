@@ -6,7 +6,7 @@ title: Next Fest Homepage
 
 <div style="background-image: url('{{ "/assets/images/nf-placeholder.jpg" | relative_url }}');" class="o-wrapper__full-width o-spacer__bottom--large o-height--hero o-center--vertical c-next__hero c-next__hero-video">
   <video playsinline autoplay muted loop class="c-next__hero-video">
-    <source src="https://dotorg-prd-assets.s3.amazonaws.com/images/misc/nf-test.mp4" type="video/mp4">
+    <source src="{{ "/assets/images/nf-testvid.mp4" | relative_url }}" type="video/mp4">
   </video>
   <div class="c-next__hero-overlay">
 
@@ -106,6 +106,7 @@ title: Next Fest Homepage
 <script src="{{ "/assets/javascript/transition.js" | relative_url }}"></script>
 <script src="{{ "/assets/javascript/zoom.js" | relative_url }}"></script>
 <script type="text/javascript">
+
 $( document ).ready(function() {
   /* Sections to match viewport height to 70% */
   $('.o-height--hero').css('height', window.innerHeight*.80+'px');
@@ -113,7 +114,6 @@ $( document ).ready(function() {
     $('.o-height--hero').css('height', window.innerHeight*.80+'px');
   });
 });
-
 
 $(function() {
     var header = $(".c-next__nav");
@@ -131,19 +131,6 @@ $(function() {
           header.removeClass('c-next__nav--default');
       }
     });
-    // $(window).scroll(function() {
-    //     var scroll = $(window).scrollTop();
-    //
-    //     if (scroll >= 10) {
-    //         header.addClass('c-next__nav--default');
-    //     } else {
-    //         header.removeClass('c-next__nav--default');
-    //     }
-    // });
 });
-
-
-
-
 
 </script>

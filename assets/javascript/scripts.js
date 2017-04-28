@@ -13,27 +13,96 @@ $( document ).ready(function() {
     menu.toggleClass("c-dropdown--active");
   });
 
-   $('.c-dropdown > .o-list-menu__item').click (function(e){
+   $('.c-dropdown > .o-list-menu__item, .c-filters__menu--sub > .o-list-menu__item').click (function(e){
     e.stopPropagation();
     $(this).toggleClass("o-list-menu__item--selected")
 
   });
 
   // Toggles nav menu
-  $('.c-nav__icon').on('click', function(){
-    if ($('.o-content__inner').hasClass('is-open')) {
+  // $('.c-nav__icon').on('click', function(){
+  //   if ($('.o-content__inner').hasClass('open-left')) {
+  //     $('.c-nav__icon').removeClass('is-active');
+  //     $('.o-content__inner').removeClass('open-left');
+  //     function hideNav() {
+  //       $('.c-nav__container, body').removeClass('open');
+  //     }
+  //     setTimeout(hideNav, 300)
+  //   } else {
+  //     $('.c-nav__icon').addClass('is-active');
+  //     $('.o-content__inner').addClass('open-left');
+  //     $('.c-nav__container, body').addClass('open');
+  //   }
+  // });
+
+  // Toggles nav menu
+
+  $(function() {
+    var openLeftNav = function() {
+      $('.c-nav__icon').addClass('is-active');
+      $('.o-content__inner').addClass('open-left');
+      $('.c-nav__container, body').addClass('open');
+    }
+    var closeLeftNav = function() {
       $('.c-nav__icon').removeClass('is-active');
-      $('.o-content__inner').removeClass('is-open');
+      $('.o-content__inner').removeClass('open-left');
       function hideNav() {
-        $('.c-nav__container').removeClass('is-open');
+        $('.c-nav__container, body').removeClass('open');
       }
       setTimeout(hideNav, 300)
-    } else {
-      $('.c-nav__icon').addClass('is-active');
-      $('.o-content__inner').addClass('is-open');
-      $('.c-nav__container').addClass('is-open');
     }
-  });
+
+    $('.c-nav__icon').click(function(event) {
+      if ($('.o-content__inner').hasClass('open-left')) {
+        event.stopPropagation();
+        closeLeftNav();
+      } else {
+        event.stopPropagation();
+        openLeftNav();
+      }
+    });
+
+    $(document).click(function(event) {
+      if ($(event.target).closest('.open-left').length) {
+        closeLeftNav();
+      }
+    });
+  })
+
+  // filters
+  $(function() {
+
+    var openRightFilter = function() {
+      $('.o-content__inner, .c-filters__container').addClass('open-right');
+      $('html, body').addClass('modal-open');
+    }
+    var closeRightFilter = function() {
+      $('.o-content__inner, .c-filters__container').removeClass('open-right');
+      $('html, body').removeClass('modal-open');
+    }
+    var openSecondFilter = function() {
+      $('.o-content__inner, .c-filters__container').removeClass('open-right');
+      $('html, body').removeClass('modal-open');
+    }
+
+
+    $('.open-filters').click(function(event) {
+      event.stopPropagation();
+      openRightFilter();
+    });
+
+    $('.c-filters__back').click(function(event) {
+      event.stopPropagation();
+      closeRightFilter();
+    });
+
+    $('.c-filters__menu--top > .c-filters__menu-item').on('click', function () {
+      // event.stopPropagation();
+      $('.c-filters__menu-container').addClass('open-right');
+      $(this).addClass('open');
+    });
+
+  })
 
   // toggles a class on current modal as well as body
   $('.o-modal__toggle').click(function() {

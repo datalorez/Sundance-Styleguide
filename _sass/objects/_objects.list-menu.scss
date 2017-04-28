@@ -5,10 +5,10 @@
 }
 
 .o-list-menu__item {
-  position: relative;
   cursor: pointer;
   margin-bottom: 0;
   > a, > label {
+    position: relative;
     padding: $inuit-global-spacing-unit/2 $inuit-global-spacing-unit*1.66666 $inuit-global-spacing-unit/2 $inuit-global-spacing-unit/2;
     white-space: nowrap;
     font-size: 14px;
