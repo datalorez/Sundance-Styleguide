@@ -154,6 +154,7 @@ $color-nf-gray: #7F7F7F;
     overflow: hidden;
     background-size: cover;
     background-position: center center;
+    max-height: 620px;
     // @include mq($until: tablet) {
     //   background: none;
     // }
@@ -291,6 +292,16 @@ $color-nf-gray: #7F7F7F;
 
 
 // ZOOM STYLES
+
+.zoom-overlay {
+  @include icon(after, close) {
+    font-size: 48px;
+    color: black;
+    position: absolute;
+    top:0;
+    right:$inuit-global-spacing-unit/2;
+  }
+}
 
 img[data-action="zoom"] {
   cursor: pointer;
